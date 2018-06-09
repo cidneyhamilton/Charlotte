@@ -1,0 +1,36 @@
+[
+	{
+		"key": "longsword",
+		"itemName": "Longsword",
+		"description": "A long sword, good for slashing.",
+		"Type": "Weapon",
+		"actionName": "Equip"
+	},
+	{
+		"key": "shortsword",
+		"itemName": "Shortsword",
+		"description": "A short sword, good for thrusting.",
+		"Type": "Weapon",
+		"actionName": "Equip"
+	},
+	{
+		"key": "staff",
+		"itemName": "Wizard's Staff",
+		"description": "A simple quarterstaff with magical runes carved in the sides.",
+		"Type": "Weapon",
+		"actionName": "Equip"
+	},
+	{
+		"key": "bow",
+		"itemName": "Short Bow",
+		"description": "A shortbow.",
+		"Type": "Weapon",
+		"actionName": "Equip"
+	},
+	{
+		"key": "reward",
+		"itemName": "Reward Money",
+		"description": "One kilogram, of silver",
+		"Type": "Quest",
+	}
+]

@@ -1,0 +1,10 @@
+{
+	"folders":
+	[
+		{
+            "follow_symlinks": true,
+			"path": "."
+		}
+	],
+    "solution_file": "Charlotte-the-Bandit-Queen.sln"
+}
