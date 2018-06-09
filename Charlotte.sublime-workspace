@@ -8,64 +8,64 @@
 	"buffers":
 	[
 		{
-			"file": "Assets/Scripts/Gameplay/Items/Weapons/WeaponController.cs",
+			"file": "Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs",
 			"settings":
 			{
-				"buffer_size": 1356,
+				"buffer_size": 1655,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Assets/Scripts/Gameplay/Actors/Player.cs",
+			"file": "Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs",
 			"settings":
 			{
-				"buffer_size": 838,
+				"buffer_size": 2522,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs",
+			"settings":
+			{
+				"buffer_size": 314,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Assets/Scripts/Gameplay/World/Signpost.cs",
+			"contents": "Searching 3123 files for \"textreaction\"\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assembly-CSharp-Editor.csproj:\n   60       <Compile Include=\"Assets\\Scripts\\Editor\\Interaction\\ReactionEditors\\SceneReactionEditor.cs\" />\n   61       <Compile Include=\"Assets\\Scripts\\Editor\\Interaction\\ReactionEditors\\SpeechReactionEditor.cs\" />\n   62:      <Compile Include=\"Assets\\Scripts\\Editor\\Interaction\\ReactionEditors\\TextReactionEditor.cs\" />\n   63       <None Include=\"Assets\\Standard Assets\\Effects\\ImageEffects\\Shaders\\_BloomAndFlares\\BlendOneOne.shader\" />\n   64       <None Include=\"Assets\\Standard Assets\\Effects\\ImageEffects\\Shaders\\NoiseEffectShaderRGB.shader\" />\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assembly-CSharp.csproj:\n   95       <Compile Include=\"Assets\\Scripts\\ScriptableObjects\\Interaction\\SceneReaction.cs\" />\n   96       <Compile Include=\"Assets\\Scripts\\ScriptableObjects\\Interaction\\SpeechReaction.cs\" />\n   97:      <Compile Include=\"Assets\\Scripts\\ScriptableObjects\\Interaction\\TextReaction.cs\" />\n   98       <Compile Include=\"Assets\\Scripts\\ScriptableObjects\\ResettableScriptableObject.cs\" />\n   99       <None Include=\"Assets\\Standard Assets\\Effects\\ImageEffects\\Shaders\\_BloomAndFlares\\BlendOneOne.shader\" />\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs:\n    2  using UnityEngine;\n    3  \n    4: [CustomEditor(typeof(TextReaction))]\n    5: public class TextReactionEditor : ReactionEditor\n    6  {\n    7      private SerializedProperty messageProperty;         // Represents the string field which is the message to be displayed.\n    .\n    9      private const float messageGUILines = 3f;           // How many lines tall the GUI for the message field should be.\n   10      private const float areaWidthOffset = 19f;          // Offset to account for the message GUI being made of two GUI calls.  It makes the GUI line up.\n   11:     private const string textReactionPropMessageName = \"message\";\n   12                                                          // The name of the field which is the message to be written to the screen.\n   13  \n   ..\n   15      {\n   16          // Cache all the SerializedProperties.\n   17:         messageProperty = serializedObject.FindProperty (textReactionPropMessageName);\n   18      }\n   19  \n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/ScriptableObjects/Interaction/SpeechReaction.cs:\n    1  using UnityEngine;\n    2  \n    3: public class TextReaction : Reaction {\n    4  \n    5      public string speakerName;                  // The name of the character speaking the text\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs:\n    1  using UnityEngine;\n    2  \n    3: public class TextReaction : Reaction {\n    4  \n    5  \tpublic string message;                      // The text to be displayed to the screen.\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Library/assetDatabase3:\n    <binary>\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Library/metadata/7f/7fae3cad8f56043939b43b8b56fe6585:\n    <binary>\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Library/metadata/7f/7fae3cad8f56043939b43b8b56fe6585.info:\n    <binary>\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Library/metadata/a4/a43384d837fbc42a0aaffe061d88b2d8:\n    <binary>\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Library/metadata/cb/cb09a09b67ed14583b42951b3a4a3eac:\n    <binary>\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Library/metadata/cb/cb09a09b67ed14583b42951b3a4a3eac.info:\n    <binary>\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll.mdb:\n    <binary>\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb:\n    <binary>\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-00ff90cdb7a9949e8a03a911f0f0d729:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-0140dc71404ab418ab7778f6b30393b3:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-04dec32c17e6445d4b50a016ec095d8e:\n  130  'Assets/Scripts/Editor/Interaction/ReactionEditors/SceneReactionEditor.cs'\n  131  'Assets/Scripts/Editor/Interaction/ReactionEditors/SpeechReactionEditor.cs'\n  132: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  133  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  134  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-0b199a1c701b94050a91dbebdbdcaa07:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-17042ab2a68e345109756485034d2738:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-2528613b8beff4796ab2f812f99e12cb:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-2acd47a5abb1f4774ad6a0d895315584:\n  130  'Assets/Scripts/Editor/Interaction/ReactionEditors/SceneReactionEditor.cs'\n  131  'Assets/Scripts/Editor/Interaction/ReactionEditors/SpeechReactionEditor.cs'\n  132: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  133  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  134  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-36fbe121916c441fba65d07be62f6e33:\n  146  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-3ca78f99d67264aa486f48a4f3974566:\n  145  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  146  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  147: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  148  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  149  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-472fb5c67ded4442394e99d7e1786dfd:\n  146  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-4bc1071e31e114edd996a072b13d6b00:\n  146  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-503fc3162f7834a11a2c009ef0e36d87:\n  146  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-522aed3846065449aa6228e0fc229378:\n  146  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-54ae090ce4a474ec79f02e28128038a9:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-58df7d868983d445e832b769bae61a84:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-5ad35360fd63342ba96b9966e775e126:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-5f6dd3ec6667e4c95b82ac5eab25ab74:\n  130  'Assets/Scripts/Editor/Interaction/ReactionEditors/SceneReactionEditor.cs'\n  131  'Assets/Scripts/Editor/Interaction/ReactionEditors/SpeechReactionEditor.cs'\n  132: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  133  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  134  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-60c09625ca1bf4599867092f71fe6b4e:\n  146  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-61159ca100f1e4c73a54786331d679de:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-82466f0683ae44e89984a377a19fc216:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-847f144ff1d3c4331a1b6a8f610105bb:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-8b3f250bd0a994cc99c1a5935b8ce23e:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-90fef57f3c4ad4155b3079cc0b13bacf:\n  145  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  146  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  147: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  148  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  149  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-94008ffff99314086b3417f8594f56cb:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-94e36f96e81314e288a9bb2201d0dddf:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-99d9c85369b9d489a84f4837522074b5:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-a0b6382a3e5634c22a40126b73b761ec:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-a245c70671ab34658bd574125812d3db:\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130  'Assets/Scripts/Editor/Interaction/ReactionEditors/SceneReactionEditor.cs'\n  131: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  133  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-bae814bb642a64964b59ed3c21923785:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-c782947b8104547e4b988bf65d1f9562:\n  147  'Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs'\n  148  'Assets/Scripts/ScriptableObjects/Interaction/SpeechReaction.cs'\n  149: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  150  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  151  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-c91f860519ff4402fa364a5ea854535f:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-cec03aa755d09407ebae9cfb36a7fd58:\n  130  'Assets/Scripts/Editor/Interaction/ReactionEditors/SceneReactionEditor.cs'\n  131  'Assets/Scripts/Editor/Interaction/ReactionEditors/SpeechReaction.cs'\n  132: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  133  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  134  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-d9ce51d07d70a4c078634104ca33c6cf:\n  147  'Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs'\n  148  'Assets/Scripts/ScriptableObjects/Interaction/SpeechReaction.cs'\n  149: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  150  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  151  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-e3bfdc8c4176c4389bebbc3eb6d36e78:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-e49c4add1bc064d5680aa61d23efef4c:\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130  'Assets/Scripts/Editor/Interaction/ReactionEditors/SceneReactionEditor.cs'\n  131: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  133  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-f4fa2bd7a91ae440397cb3c53cebfd28:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-f7f75d2287d7d48e2ab5b07a5d903664:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-fc5e8a142b8454f1b9e817c675d989e7:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-fca9496c0390645ccab4c430992ce680:\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130  'Assets/Scripts/Editor/Interaction/ReactionEditors/SceneReactionEditor.cs'\n  131: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  133  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-ff32921a69b574e1397c83556003788d:\n  130  'Assets/Scripts/Editor/Interaction/ReactionEditors/SceneReactionEditor.cs'\n  131  'Assets/Scripts/Editor/Interaction/ReactionEditors/SpeechReactionEditor.cs'\n  132: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  133  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  134  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n76 matches across 53 files\n",
 			"settings":
 			{
-				"buffer_size": 292,
+				"buffer_size": 25668,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "Assets/Scripts/ScriptableObjects/Interaction/SpeechReaction.cs",
+			"settings":
+			{
+				"buffer_size": 431,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Assets/Scripts/CameraController.cs",
+			"file": "Assets/Scripts/MonoBehaviours/UI/DialogManager.cs",
 			"settings":
 			{
-				"buffer_size": 909,
+				"buffer_size": 1014,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Assets/Scripts/Scenes/SceneController.cs",
+			"file": "Assets/Scripts/Editor/Interaction/ReactionEditors/SpeechReactionEditor.cs",
 			"settings":
 			{
-				"buffer_size": 1028,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Gameplay/Actors/Character.cs",
-			"settings":
-			{
-				"buffer_size": 497,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Gameplay/Items/Weapons/Sword.cs",
-			"settings":
-			{
-				"buffer_size": 885,
+				"buffer_size": 2247,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
@@ -111,21 +111,44 @@
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts",
-		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Gameplay",
-		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Gameplay/Actors",
-		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Gameplay/World",
-		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Scenes",
-		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/UI"
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Editor",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Editor/Interaction",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Editor/Interaction/ReactionEditors",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay/World",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Scenes",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/ScriptableObjects",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/ScriptableObjects/Interaction"
 	],
 	"file_history":
 	[
-		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Gameplay/Actors/CharacterStats.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/DataPersistence/Saver.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay/World/Interactable.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay/World/ActionItem.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay/World/ZoneTrigger.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay/World/Signpost.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Interaction/ReactionCollection.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay/World/WorldInteraction.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Camera/CameraController.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Gameplay/Actors/Character.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Gameplay/Actors/Bandit.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Gameplay/World/ZoneTrigger.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Scenes/SceneController.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/CameraController.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Gameplay/Items/Weapons/Sword.cs",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/UI/DialogManager.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Gameplay/Items/Weapons/WeaponController.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Gameplay/Actors/Player.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Fade.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Gameplay/Actors/CharacterStats.cs",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Gameplay/World/WorldInteraction.cs",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/UI/UIEventHandler.cs",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/UI/Inventory/InventoryView.cs",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Charlotte.sublime-project",
-		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Scenes/SceneController.cs",
 		"/Users/cidney/Development/Games/Unity/Charlotte/Assets/Scripts/Player/PlayerMovement.cs",
 		"/Users/cidney/Development/Games/Unity/Charlotte/Assets/Scripts/Player/Player.cs",
 		"/Users/cidney/Development/Games/Unity/Charlotte/Assets/Scripts/Camera/CameraController.cs",
@@ -227,26 +250,7 @@
 		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/SystemMenu/SaveLoad/Buttons/LoadSaveGameButton.cs",
 		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/SystemMenu/SaveLoad/Buttons/SaveGameButton.cs",
 		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/SystemMenu/SaveLoad/Buttons/OverwriteSaveGameButton.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/SystemMenu/SaveLoad/Buttons/DeleteSaveGameButton.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/ComposerBridge.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/SystemMenu/SaveLoad/Buttons/SaveGameActionButton.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/Layouts/LayoutController.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Transolar.Runtime/GameOperations.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Transolar.Runtime/IGameOperations.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Transolar.Runtime/Scripts/Nodes/Fade.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Props/DamController.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/TooltipView.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Props/KilnRoomAmbushController.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Props/HostileAmbushController.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/SceneManager.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/Character/CharacterStatsUIManager.cs",
-		"/Users/cidney/Development/Hero-U/HeroU.sublime-project",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/Layouts/BackgroundLayout.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/DialogManager.cs",
-		"/Users/cidney/Development/Hero-U/Composer/Data/Scripts/1edaa056-14e1-47aa-99d6-7490dd6ca27d.json",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Transolar.Runtime/Scripts/ScriptExecutionContext.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Transolar.Runtime/Scripts/Nodes/NodeCycle.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Transolar.Runtime/State/GameState.cs"
+		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/SystemMenu/SaveLoad/Buttons/DeleteSaveGameButton.cs"
 	],
 	"find":
 	{
@@ -265,6 +269,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"textreaction",
+			"movetointeraction",
 			"onacquired"
 		],
 		"highlight": true,
@@ -283,157 +289,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/Scripts/Gameplay/Items/Weapons/WeaponController.cs",
+					"file": "Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1356,
+						"buffer_size": 1655,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1222,
-								1222
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"526,527": "Type cast is redundant",
-								"88,92": "Name should have prefix '_'. (Rule 'Fields')."
-							},
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 211.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Assets/Scripts/Gameplay/Actors/Player.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 838,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								658,
-								658
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"105,121": "Name should have prefix '_'. (Rule 'Fields').",
-								"70,78": "'Instance' should start with a lower case letter. (Rule 'Fields')"
-							},
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Assets/Scripts/Gameplay/World/Signpost.cs",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 292,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Assets/Scripts/CameraController.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 909,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								449,
-								449
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"0,5": "Using directive is not used by code and can be removed safely.",
-								"210,222": "Name should have prefix '_'. (Rule 'Fields').",
-								"254,263": "Convert to constant",
-								"26,31": "Using directive is not used by code and can be removed safely.",
-								"386,391": "Comparison of floating point numbers can be unequal due to the differing precision of the two values."
-							},
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Assets/Scripts/Scenes/SceneController.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1028,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								555,
-								555
+								525,
+								372
 							]
 						],
 						"settings":
@@ -446,78 +319,411 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2522,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 182.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "Assets/Scripts/Gameplay/Actors/Character.cs",
+					"buffer": 2,
+					"file": "Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 497,
+						"buffer_size": 314,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								335,
-								335
+								228,
+								228
 							]
 						],
 						"settings":
 						{
 							"oops":
 							{
-								"64,69": "Name should have prefix '_'. (Rule 'Fields').",
-								"84,97": "Name should have prefix '_'. (Rule 'Fields').",
-								"99,108": "Name should have prefix '_'. (Rule 'Fields')."
+								"257,270": "'DialogManager' is not a known identifier",
+								"271,279": "'?' does not contain a definition for 'Instance'",
+								"280,294": "'?' does not contain a definition for 'AddNewDialogue'",
+								"304,305": "'?' does not contain a definition for 'AddNewDialogue'",
+								"48,56": "'Reaction' is not a known identifier"
 							},
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Assets/Scripts/Gameplay/Items/Weapons/Sword.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 885,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								586,
-								586
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"0,5": "Using directive is not used by code and can be removed safely.",
-								"166,172": "Name should have prefix '_'. (Rule 'Fields').",
-								"26,31": "Using directive is not used by code and can be removed safely.",
-								"701,702": "Type cast is redundant"
-							},
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25668,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										432,
+										444
+									],
+									[
+										1045,
+										1057
+									],
+									[
+										1481,
+										1493
+									],
+									[
+										1517,
+										1529
+									],
+									[
+										2019,
+										2031
+									],
+									[
+										2343,
+										2355
+									],
+									[
+										2578,
+										2590
+									],
+									[
+										2896,
+										2908
+									],
+									[
+										4376,
+										4388
+									],
+									[
+										4894,
+										4906
+									],
+									[
+										5482,
+										5494
+									],
+									[
+										6053,
+										6065
+									],
+									[
+										6607,
+										6619
+									],
+									[
+										7108,
+										7120
+									],
+									[
+										7643,
+										7655
+									],
+									[
+										8198,
+										8210
+									],
+									[
+										8699,
+										8711
+									],
+									[
+										9201,
+										9213
+									],
+									[
+										9703,
+										9715
+									],
+									[
+										10205,
+										10217
+									],
+									[
+										10707,
+										10719
+									],
+									[
+										11208,
+										11220
+									],
+									[
+										11726,
+										11738
+									],
+									[
+										12297,
+										12309
+									],
+									[
+										12885,
+										12897
+									],
+									[
+										13440,
+										13452
+									],
+									[
+										13941,
+										13953
+									],
+									[
+										14442,
+										14454
+									],
+									[
+										14943,
+										14955
+									],
+									[
+										15444,
+										15456
+									],
+									[
+										15945,
+										15957
+									],
+									[
+										16463,
+										16475
+									],
+									[
+										17034,
+										17046
+									],
+									[
+										17605,
+										17617
+									],
+									[
+										18176,
+										18188
+									],
+									[
+										18758,
+										18770
+									],
+									[
+										19329,
+										19341
+									],
+									[
+										19890,
+										19902
+									],
+									[
+										20408,
+										20420
+									],
+									[
+										20990,
+										21002
+									],
+									[
+										21551,
+										21563
+									],
+									[
+										22052,
+										22064
+									],
+									[
+										22581,
+										22593
+									],
+									[
+										23152,
+										23164
+									],
+									[
+										23706,
+										23718
+									],
+									[
+										24224,
+										24236
+									],
+									[
+										24806,
+										24818
+									],
+									[
+										25394,
+										25406
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								2513,
+								2513
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 434.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/Scripts/ScriptableObjects/Interaction/SpeechReaction.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 431,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								407,
+								407
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"360,373": "'DialogManager' is not a known identifier",
+								"374,382": "'?' does not contain a definition for 'Instance'",
+								"383,397": "'?' does not contain a definition for 'AddNewDialogue'",
+								"421,422": "'?' does not contain a definition for 'AddNewDialogue'",
+								"50,58": "'Reaction' is not a known identifier"
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Assets/Scripts/MonoBehaviours/UI/DialogManager.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1014,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 262.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Assets/Scripts/Editor/Interaction/ReactionEditors/SpeechReactionEditor.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2247,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1420,
+								1435
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"114,128": "'ReactionEditor' is not a known identifier",
+								"756,772": "'serializedObject' is not a known identifier",
+								"773,785": "'?' does not contain a definition for 'FindProperty'",
+								"817,818": "Cannot convert from ? to UnityEditor.SerializedProperty",
+								"845,861": "'serializedObject' is not a known identifier",
+								"862,874": "'?' does not contain a definition for 'FindProperty'",
+								"906,907": "Cannot convert from ? to UnityEditor.SerializedProperty"
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 3.0,
+						"translation.y": 87.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -580,6 +786,62 @@
 		"selected_items":
 		[
 			[
+				"textreaction",
+				"Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs"
+			],
+			[
+				"dialogmanager",
+				"Assets/Scripts/MonoBehaviours/UI/DialogManager.cs"
+			],
+			[
+				"speechreactioneditor",
+				"Assets/Scripts/Editor/Interaction/ReactionEditors/SpeechReactionEditor.cs"
+			],
+			[
+				"textreactioneditor",
+				"Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs"
+			],
+			[
+				"zonetrigger",
+				"Assets/Scripts/MonoBehaviours/Gameplay/World/ZoneTrigger.cs"
+			],
+			[
+				"interactable",
+				"Assets/Scripts/MonoBehaviours/Gameplay/World/Interactable.cs"
+			],
+			[
+				"actionitem",
+				"~/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay/World/ActionItem.cs"
+			],
+			[
+				"reactioncoll",
+				"Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs"
+			],
+			[
+				"sign",
+				"Assets/Scripts/MonoBehaviours/Gameplay/World/Signpost.cs"
+			],
+			[
+				"saver",
+				"Assets/Scripts/MonoBehaviours/DataPersistence/Saver.cs"
+			],
+			[
+				"camera",
+				"Assets/Scripts/Camera/CameraController.cs"
+			],
+			[
+				"character",
+				"Assets/Scripts/Gameplay/Actors/Character.cs"
+			],
+			[
+				"bandit",
+				"Assets/Scripts/Gameplay/Actors/Bandit.cs"
+			],
+			[
+				"fade",
+				"Assets/Scripts/Fade.cs"
+			],
+			[
 				"cameracontroller",
 				"Assets/Scripts/CameraController.cs"
 			],
@@ -588,16 +850,8 @@
 				"Assets/Scripts/Gameplay/Actors/CharacterStats.cs"
 			],
 			[
-				"character",
-				"Assets/Scripts/Gameplay/Actors/Character.cs"
-			],
-			[
 				"weaponcontroller",
 				"Assets/Scripts/Gameplay/Items/Weapons/WeaponController.cs"
-			],
-			[
-				"dialogmanager",
-				"Assets/Scripts/UI/DialogManager.cs"
 			],
 			[
 				"actorcontroller",
@@ -972,10 +1226,6 @@
 				"Game/Assets/Transolar.Runtime/IGameOperations.cs"
 			],
 			[
-				"fade",
-				"Game/Assets/Transolar.Runtime/Scripts/Nodes/Fade.cs"
-			],
-			[
 				"kilnroom",
 				"Game/Assets/Scripts/Props/Encounters/KilnRoomAmbushController.cs"
 			],
@@ -1046,50 +1296,6 @@
 			[
 				"money",
 				"Game/Assets/Transolar.Runtime/Scripts/Nodes/ChangeMoney.cs"
-			],
-			[
-				"reputation",
-				"Game/Assets/Scripts/Interface/Character/CharacterReputationUIManager.cs"
-			],
-			[
-				"settingsmenu",
-				"Game/Assets/Scripts/Interface/SettingsMenu.cs"
-			],
-			[
-				"audio",
-				"Game/Assets/Scripts/Audio/AudioPreferences.cs"
-			],
-			[
-				"system",
-				"Game/Assets/Scripts/Interface/SystemMenu/SystemMenu.cs"
-			],
-			[
-				"equipment",
-				"Game/Assets/Scripts/Interface/InventoryEquipmentUIManager.cs"
-			],
-			[
-				"camera",
-				"Game/Assets/Scripts/Camera/CameraController.cs"
-			],
-			[
-				"a",
-				"Proofread/jquery-1.11.3.min.js"
-			],
-			[
-				"onlooted",
-				"Game/Assets/Transolar.Runtime/Scripts/Triggers/OnLooted.cs"
-			],
-			[
-				"actoridentity",
-				"Game/Assets/Transolar.Runtime/Actors/ActorIdentity.cs"
-			],
-			[
-				"actorbehavior",
-				"Game/Assets/Scripts/Characters/ActorBehavior.cs"
-			],
-			[
-				"combatagent",
-				"Game/Assets/Scripts/Combat/CombatAgent.cs"
 			]
 		],
 		"width": 0.0
