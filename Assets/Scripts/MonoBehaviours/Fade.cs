@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Fade : Singleton<Fade> {
@@ -11,7 +9,7 @@ public class Fade : Singleton<Fade> {
         FadeFromBlack();
     }
 
-	public void FadeToBlack(float fadeTime=1f) {
+    public void FadeToBlack(float fadeTime=1f) {
         fillImage.gameObject.SetActive(true);
         fillImage.CrossFadeAlpha(1f, fadeTime, false);
     }

@@ -1,14 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿public class NPC : Interactable {
 
-public class NPC : Interactable {
-
-	public string[] dialogue;
-	public string name;
+    public ReactionCollection defaultReactionCollection;
 
 	public override void Interact() {
-		DialogManager.Instance.AddNewDialogue (dialogue, name);
-		Debug.Log ("Interacting with an NPC.");
+		defaultReactionCollection.React ();   
 	}
 }
