@@ -8,51 +8,6 @@
 	"buffers":
 	[
 		{
-			"file": "Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs",
-			"settings":
-			{
-				"buffer_size": 1655,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs",
-			"settings":
-			{
-				"buffer_size": 2522,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs",
-			"settings":
-			{
-				"buffer_size": 314,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Searching 3123 files for \"textreaction\"\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assembly-CSharp-Editor.csproj:\n   60       <Compile Include=\"Assets\\Scripts\\Editor\\Interaction\\ReactionEditors\\SceneReactionEditor.cs\" />\n   61       <Compile Include=\"Assets\\Scripts\\Editor\\Interaction\\ReactionEditors\\SpeechReactionEditor.cs\" />\n   62:      <Compile Include=\"Assets\\Scripts\\Editor\\Interaction\\ReactionEditors\\TextReactionEditor.cs\" />\n   63       <None Include=\"Assets\\Standard Assets\\Effects\\ImageEffects\\Shaders\\_BloomAndFlares\\BlendOneOne.shader\" />\n   64       <None Include=\"Assets\\Standard Assets\\Effects\\ImageEffects\\Shaders\\NoiseEffectShaderRGB.shader\" />\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assembly-CSharp.csproj:\n   95       <Compile Include=\"Assets\\Scripts\\ScriptableObjects\\Interaction\\SceneReaction.cs\" />\n   96       <Compile Include=\"Assets\\Scripts\\ScriptableObjects\\Interaction\\SpeechReaction.cs\" />\n   97:      <Compile Include=\"Assets\\Scripts\\ScriptableObjects\\Interaction\\TextReaction.cs\" />\n   98       <Compile Include=\"Assets\\Scripts\\ScriptableObjects\\ResettableScriptableObject.cs\" />\n   99       <None Include=\"Assets\\Standard Assets\\Effects\\ImageEffects\\Shaders\\_BloomAndFlares\\BlendOneOne.shader\" />\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs:\n    2  using UnityEngine;\n    3  \n    4: [CustomEditor(typeof(TextReaction))]\n    5: public class TextReactionEditor : ReactionEditor\n    6  {\n    7      private SerializedProperty messageProperty;         // Represents the string field which is the message to be displayed.\n    .\n    9      private const float messageGUILines = 3f;           // How many lines tall the GUI for the message field should be.\n   10      private const float areaWidthOffset = 19f;          // Offset to account for the message GUI being made of two GUI calls.  It makes the GUI line up.\n   11:     private const string textReactionPropMessageName = \"message\";\n   12                                                          // The name of the field which is the message to be written to the screen.\n   13  \n   ..\n   15      {\n   16          // Cache all the SerializedProperties.\n   17:         messageProperty = serializedObject.FindProperty (textReactionPropMessageName);\n   18      }\n   19  \n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/ScriptableObjects/Interaction/SpeechReaction.cs:\n    1  using UnityEngine;\n    2  \n    3: public class TextReaction : Reaction {\n    4  \n    5      public string speakerName;                  // The name of the character speaking the text\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs:\n    1  using UnityEngine;\n    2  \n    3: public class TextReaction : Reaction {\n    4  \n    5  \tpublic string message;                      // The text to be displayed to the screen.\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Library/assetDatabase3:\n    <binary>\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Library/metadata/7f/7fae3cad8f56043939b43b8b56fe6585:\n    <binary>\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Library/metadata/7f/7fae3cad8f56043939b43b8b56fe6585.info:\n    <binary>\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Library/metadata/a4/a43384d837fbc42a0aaffe061d88b2d8:\n    <binary>\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Library/metadata/cb/cb09a09b67ed14583b42951b3a4a3eac:\n    <binary>\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Library/metadata/cb/cb09a09b67ed14583b42951b3a4a3eac.info:\n    <binary>\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll.mdb:\n    <binary>\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb:\n    <binary>\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-00ff90cdb7a9949e8a03a911f0f0d729:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-0140dc71404ab418ab7778f6b30393b3:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-04dec32c17e6445d4b50a016ec095d8e:\n  130  'Assets/Scripts/Editor/Interaction/ReactionEditors/SceneReactionEditor.cs'\n  131  'Assets/Scripts/Editor/Interaction/ReactionEditors/SpeechReactionEditor.cs'\n  132: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  133  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  134  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-0b199a1c701b94050a91dbebdbdcaa07:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-17042ab2a68e345109756485034d2738:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-2528613b8beff4796ab2f812f99e12cb:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-2acd47a5abb1f4774ad6a0d895315584:\n  130  'Assets/Scripts/Editor/Interaction/ReactionEditors/SceneReactionEditor.cs'\n  131  'Assets/Scripts/Editor/Interaction/ReactionEditors/SpeechReactionEditor.cs'\n  132: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  133  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  134  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-36fbe121916c441fba65d07be62f6e33:\n  146  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-3ca78f99d67264aa486f48a4f3974566:\n  145  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  146  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  147: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  148  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  149  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-472fb5c67ded4442394e99d7e1786dfd:\n  146  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-4bc1071e31e114edd996a072b13d6b00:\n  146  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-503fc3162f7834a11a2c009ef0e36d87:\n  146  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-522aed3846065449aa6228e0fc229378:\n  146  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-54ae090ce4a474ec79f02e28128038a9:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-58df7d868983d445e832b769bae61a84:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-5ad35360fd63342ba96b9966e775e126:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-5f6dd3ec6667e4c95b82ac5eab25ab74:\n  130  'Assets/Scripts/Editor/Interaction/ReactionEditors/SceneReactionEditor.cs'\n  131  'Assets/Scripts/Editor/Interaction/ReactionEditors/SpeechReactionEditor.cs'\n  132: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  133  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  134  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-60c09625ca1bf4599867092f71fe6b4e:\n  146  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-61159ca100f1e4c73a54786331d679de:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-82466f0683ae44e89984a377a19fc216:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-847f144ff1d3c4331a1b6a8f610105bb:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-8b3f250bd0a994cc99c1a5935b8ce23e:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-90fef57f3c4ad4155b3079cc0b13bacf:\n  145  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  146  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  147: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  148  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  149  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-94008ffff99314086b3417f8594f56cb:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-94e36f96e81314e288a9bb2201d0dddf:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-99d9c85369b9d489a84f4837522074b5:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-a0b6382a3e5634c22a40126b73b761ec:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-a245c70671ab34658bd574125812d3db:\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130  'Assets/Scripts/Editor/Interaction/ReactionEditors/SceneReactionEditor.cs'\n  131: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  133  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-bae814bb642a64964b59ed3c21923785:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-c782947b8104547e4b988bf65d1f9562:\n  147  'Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs'\n  148  'Assets/Scripts/ScriptableObjects/Interaction/SpeechReaction.cs'\n  149: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  150  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  151  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-c91f860519ff4402fa364a5ea854535f:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-cec03aa755d09407ebae9cfb36a7fd58:\n  130  'Assets/Scripts/Editor/Interaction/ReactionEditors/SceneReactionEditor.cs'\n  131  'Assets/Scripts/Editor/Interaction/ReactionEditors/SpeechReaction.cs'\n  132: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  133  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  134  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-d9ce51d07d70a4c078634104ca33c6cf:\n  147  'Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs'\n  148  'Assets/Scripts/ScriptableObjects/Interaction/SpeechReaction.cs'\n  149: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  150  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  151  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-e3bfdc8c4176c4389bebbc3eb6d36e78:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-e49c4add1bc064d5680aa61d23efef4c:\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130  'Assets/Scripts/Editor/Interaction/ReactionEditors/SceneReactionEditor.cs'\n  131: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  133  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-f4fa2bd7a91ae440397cb3c53cebfd28:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-f7f75d2287d7d48e2ab5b07a5d903664:\n  146  'Assets/Scripts/ScriptableObjects/DataPersistence/SaveData.cs'\n  147  'Assets/Scripts/ScriptableObjects/Interaction/Reaction.cs'\n  148: 'Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs'\n  149  'Assets/Scripts/ScriptableObjects/ResettableScriptableObject.cs'\n  150  -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-fc5e8a142b8454f1b9e817c675d989e7:\n  128  'Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs'\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  131  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-fca9496c0390645ccab4c430992ce680:\n  129  'Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs'\n  130  'Assets/Scripts/Editor/Interaction/ReactionEditors/SceneReactionEditor.cs'\n  131: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  132  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  133  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Temp/UnityTempFile-ff32921a69b574e1397c83556003788d:\n  130  'Assets/Scripts/Editor/Interaction/ReactionEditors/SceneReactionEditor.cs'\n  131  'Assets/Scripts/Editor/Interaction/ReactionEditors/SpeechReactionEditor.cs'\n  132: 'Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs'\n  133  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'\n  134  -r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'\n\n76 matches across 53 files\n",
-			"settings":
-			{
-				"buffer_size": 25668,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "Assets/Scripts/ScriptableObjects/Interaction/SpeechReaction.cs",
-			"settings":
-			{
-				"buffer_size": 431,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "Assets/Scripts/MonoBehaviours/UI/DialogManager.cs",
 			"settings":
 			{
@@ -62,10 +17,136 @@
 			}
 		},
 		{
-			"file": "Assets/Scripts/Editor/Interaction/ReactionEditors/SpeechReactionEditor.cs",
+			"file": "Assets/Scripts/MonoBehaviours/Gameplay/Actors/NPC.cs",
 			"settings":
 			{
-				"buffer_size": 2247,
+				"buffer_size": 37,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/MonoBehaviours/Gameplay/Actors/Character.cs",
+			"settings":
+			{
+				"buffer_size": 853,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/MonoBehaviours/Fade.cs",
+			"settings":
+			{
+				"buffer_size": 520,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 433,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/MonoBehaviours/Gameplay/Items/InventoryController.cs",
+			"settings":
+			{
+				"buffer_size": 1107,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Editor/Interaction/Conditions/ConditionEditor.cs",
+			"settings":
+			{
+				"buffer_size": 7749,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Editor/Interaction/Conditions/ConditionCollectionEditor.cs",
+			"settings":
+			{
+				"buffer_size": 6872,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/ScriptableObjects/Interaction/Conditions/Condition.cs",
+			"settings":
+			{
+				"buffer_size": 939,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Editor/Interaction/Conditions/AllConditionsEditor.cs",
+			"settings":
+			{
+				"buffer_size": 9280,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/MonoBehaviours/Gameplay/World/Interactable.cs",
+			"settings":
+			{
+				"buffer_size": 1152,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/MonoBehaviours/Gameplay/World/ActionItem.cs",
+			"settings":
+			{
+				"buffer_size": 64,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/ScriptableObjects/Interaction/Conditions/ConditionCollection.cs",
+			"settings":
+			{
+				"buffer_size": 1471,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/MonoBehaviours/Gameplay/World/ZoneTrigger.cs",
+			"settings":
+			{
+				"buffer_size": 273,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Editor/Interaction/InteractableEditor.cs",
+			"settings":
+			{
+				"buffer_size": 4494,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Editor/Abstracts/EditorWithSubEditors.cs",
+			"settings":
+			{
+				"buffer_size": 1967,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
@@ -111,26 +192,28 @@
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts",
-		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Editor",
-		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Editor/Interaction",
-		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Editor/Interaction/ReactionEditors",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay",
-		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay/World",
-		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Scenes",
-		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/ScriptableObjects",
-		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/ScriptableObjects/Interaction"
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay/Actors",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay/Items",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Scenes"
 	],
 	"file_history":
 	[
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/ScriptableObjects/Interaction/SpeechReaction.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/ScriptableObjects/Interaction/GameObjectReaction.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay/World/ZoneTrigger.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Editor/Interaction/ReactionEditors/SpeechReactionEditor.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay/Encounter.cs",
+		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/DataPersistence/Saver.cs",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay/World/Interactable.cs",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay/World/ActionItem.cs",
-		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay/World/ZoneTrigger.cs",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/ScriptableObjects/Interaction/SceneReaction.cs",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay/World/Signpost.cs",
-		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Editor/Interaction/ReactionCollectionEditor.cs",
-		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Interaction/ReactionCollection.cs",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/MonoBehaviours/Gameplay/World/WorldInteraction.cs",
 		"/Users/cidney/Development/Games/Unity/Charlotte-the-Bandit-Queen/Assets/Scripts/Camera/CameraController.cs",
@@ -244,17 +327,11 @@
 		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interaction System/Trigger.cs",
 		"/Users/cidney/Development/Hero-U/Game/Assets/Transolar.Runtime/Scripts/Triggers/ITrigger.cs",
 		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/SystemMenu/SystemMenu.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/SystemMenu/SaveLoad/SaveGameActionGroup.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/Layouts/ComposerFadeLayout.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/DebugTools/DebugManager.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/SystemMenu/SaveLoad/Buttons/LoadSaveGameButton.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/SystemMenu/SaveLoad/Buttons/SaveGameButton.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/SystemMenu/SaveLoad/Buttons/OverwriteSaveGameButton.cs",
-		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/SystemMenu/SaveLoad/Buttons/DeleteSaveGameButton.cs"
+		"/Users/cidney/Development/Hero-U/Game/Assets/Scripts/Interface/SystemMenu/SaveLoad/SaveGameActionGroup.cs"
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -269,6 +346,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"createassetmenu",
 			"textreaction",
 			"movetointeraction",
 			"onacquired"
@@ -289,378 +367,11 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 12,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1655,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								525,
-								372
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Assets/Scripts/Editor/Interaction/ReactionEditors/ReactionEditor.cs",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2522,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 182.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 314,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								228,
-								228
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"257,270": "'DialogManager' is not a known identifier",
-								"271,279": "'?' does not contain a definition for 'Instance'",
-								"280,294": "'?' does not contain a definition for 'AddNewDialogue'",
-								"304,305": "'?' does not contain a definition for 'AddNewDialogue'",
-								"48,56": "'Reaction' is not a known identifier"
-							},
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 25668,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										432,
-										444
-									],
-									[
-										1045,
-										1057
-									],
-									[
-										1481,
-										1493
-									],
-									[
-										1517,
-										1529
-									],
-									[
-										2019,
-										2031
-									],
-									[
-										2343,
-										2355
-									],
-									[
-										2578,
-										2590
-									],
-									[
-										2896,
-										2908
-									],
-									[
-										4376,
-										4388
-									],
-									[
-										4894,
-										4906
-									],
-									[
-										5482,
-										5494
-									],
-									[
-										6053,
-										6065
-									],
-									[
-										6607,
-										6619
-									],
-									[
-										7108,
-										7120
-									],
-									[
-										7643,
-										7655
-									],
-									[
-										8198,
-										8210
-									],
-									[
-										8699,
-										8711
-									],
-									[
-										9201,
-										9213
-									],
-									[
-										9703,
-										9715
-									],
-									[
-										10205,
-										10217
-									],
-									[
-										10707,
-										10719
-									],
-									[
-										11208,
-										11220
-									],
-									[
-										11726,
-										11738
-									],
-									[
-										12297,
-										12309
-									],
-									[
-										12885,
-										12897
-									],
-									[
-										13440,
-										13452
-									],
-									[
-										13941,
-										13953
-									],
-									[
-										14442,
-										14454
-									],
-									[
-										14943,
-										14955
-									],
-									[
-										15444,
-										15456
-									],
-									[
-										15945,
-										15957
-									],
-									[
-										16463,
-										16475
-									],
-									[
-										17034,
-										17046
-									],
-									[
-										17605,
-										17617
-									],
-									[
-										18176,
-										18188
-									],
-									[
-										18758,
-										18770
-									],
-									[
-										19329,
-										19341
-									],
-									[
-										19890,
-										19902
-									],
-									[
-										20408,
-										20420
-									],
-									[
-										20990,
-										21002
-									],
-									[
-										21551,
-										21563
-									],
-									[
-										22052,
-										22064
-									],
-									[
-										22581,
-										22593
-									],
-									[
-										23152,
-										23164
-									],
-									[
-										23706,
-										23718
-									],
-									[
-										24224,
-										24236
-									],
-									[
-										24806,
-										24818
-									],
-									[
-										25394,
-										25406
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								2513,
-								2513
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 434.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Assets/Scripts/ScriptableObjects/Interaction/SpeechReaction.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 431,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								407,
-								407
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"360,373": "'DialogManager' is not a known identifier",
-								"374,382": "'?' does not contain a definition for 'Instance'",
-								"383,397": "'?' does not contain a definition for 'AddNewDialogue'",
-								"421,422": "'?' does not contain a definition for 'AddNewDialogue'",
-								"50,58": "'Reaction' is not a known identifier"
-							},
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "Assets/Scripts/MonoBehaviours/UI/DialogManager.cs",
 					"semi_transient": false,
 					"settings":
@@ -672,6 +383,165 @@
 						"selection":
 						[
 							[
+								188,
+								188
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 14.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scripts/MonoBehaviours/Gameplay/Actors/NPC.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 37,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								34,
+								34
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"65,90": "Name should have prefix '_'. (Rule 'Fields')."
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Scripts/MonoBehaviours/Gameplay/Actors/Character.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 853,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								157,
+								157
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"112,125": "Name should have prefix '_'. (Rule 'Fields').",
+								"127,136": "Name should have prefix '_'. (Rule 'Fields').",
+								"162,170": "Name should have prefix '_'. (Rule 'Fields').",
+								"90,95": "Name should have prefix '_'. (Rule 'Fields')."
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Assets/Scripts/MonoBehaviours/Fade.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 520,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"101,110": "Name should have prefix '_'. (Rule 'Fields')."
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 433,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								361,
+								361
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Assets/Scripts/MonoBehaviours/Gameplay/Items/InventoryController.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1107,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
 								0,
 								0
 							]
@@ -682,48 +552,543 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 262.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "Assets/Scripts/Editor/Interaction/ReactionEditors/SpeechReactionEditor.cs",
+					"file": "Assets/Scripts/Editor/Interaction/Conditions/ConditionEditor.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2247,
+						"buffer_size": 7749,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1420,
-								1435
+								757,
+								757
 							]
 						],
 						"settings":
 						{
 							"oops":
 							{
-								"114,128": "'ReactionEditor' is not a known identifier",
-								"756,772": "'serializedObject' is not a known identifier",
-								"773,785": "'?' does not contain a definition for 'FindProperty'",
-								"817,818": "Cannot convert from ? to UnityEditor.SerializedProperty",
-								"845,861": "'serializedObject' is not a known identifier",
-								"862,874": "'?' does not contain a definition for 'FindProperty'",
-								"906,907": "Cannot convert from ? to UnityEditor.SerializedProperty"
+								"1323,1332": "'Condition' is not a known identifier",
+								"147,156": "'Condition' is not a known identifier",
+								"2314,2323": "'Condition' is not a known identifier",
+								"2324,2330": "Cannot convert from ? to [UnknownType Condition]",
+								"3752,3763": "Cannot convert from ? to System.String",
+								"3764,3765": "Invocation error: AmbiguousMatch",
+								"3964,3983": "'AllConditionsEditor' is not a known identifier",
+								"3984,3999": "'?' does not contain a definition for 'RemoveCondition'",
+								"4010,4011": "'?' does not contain a definition for 'RemoveCondition'",
+								"4431,4442": "Cannot convert from ? to System.String",
+								"4443,4444": "Invocation error: AmbiguousMatch",
+								"4953,4972": "'AllConditionsEditor' is not a known identifier",
+								"4973,4993": "'?' does not contain a definition for 'TryGetConditionIndex'",
+								"5004,5005": "Cannot convert from ? to System.Int32",
+								"5274,5289": "Invocation error: AmbiguousMatch",
+								"5312,5331": "'AllConditionsEditor' is not a known identifier",
+								"5332,5356": "Cannot convert from ? to System.String[]",
+								"5473,5482": "'Condition' is not a known identifier",
+								"5501,5520": "'AllConditionsEditor' is not a known identifier",
+								"5521,5538": "'?' does not contain a definition for 'TryGetConditionAt'",
+								"5554,5555": "'?' does not contain a definition for 'TryGetConditionAt'",
+								"5716,5727": "'?' does not contain a definition for 'description'",
+								"5730,5746": "Error: String",
+								"6297,6318": "'SerializedProperty' does not contain a definition for 'RemoveFromObjectArray'",
+								"6329,6330": "'SerializedProperty' does not contain a definition for 'RemoveFromObjectArray'",
+								"6632,6641": "'Condition' is not a known identifier",
+								"6721,6730": "'Condition' is not a known identifier",
+								"6761,6770": "'Condition' is not a known identifier",
+								"6773,6774": "Invocation error: MethodConstraintsNotSatisfied",
+								"6955,6964": "'Condition' is not a known identifier",
+								"6983,7002": "'AllConditionsEditor' is not a known identifier",
+								"7003,7020": "'?' does not contain a definition for 'TryGetConditionAt'",
+								"7023,7024": "'?' does not contain a definition for 'TryGetConditionAt'",
+								"7046,7057": "'?' does not contain a definition for 'description'",
+								"7102,7113": "'?' does not contain a definition for 'description'",
+								"7116,7132": "Cannot convert from System.String to ?",
+								"7272,7281": "'Condition' is not a known identifier",
+								"7383,7392": "'Condition' is not a known identifier",
+								"7423,7432": "'Condition' is not a known identifier",
+								"7435,7436": "Invocation error: MethodConstraintsNotSatisfied",
+								"7516,7527": "'?' does not contain a definition for 'description'",
+								"7530,7541": "Cannot convert from System.String to ?",
+								"7643,7652": "'Condition' is not a known identifier",
+								"7688,7692": "'Condition' does not contain a definition for 'hash'",
+								"7727,7738": "Cannot convert from ? to System.String",
+								"7739,7740": "Cannot convert from System.Int32 to ?"
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Assets/Scripts/Editor/Interaction/Conditions/ConditionCollectionEditor.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6872,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1404,
+								1404
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"162,171": "'Condition' is not a known identifier",
+								"172,173": "'EditorWithSubEditors' is not a known identifier",
+								"1867,1873": "Cannot convert from 'None' to 'ConditionCollection'",
+								"1962,1968": "'target' is not a known identifier",
+								"2000,2016": "'DestroyImmediate' is not a known identifier",
+								"2023,2024": "'ConditionCollectionEditor' does not contain a definition for 'DestroyImmediate'",
+								"2129,2145": "'serializedObject' is not a known identifier",
+								"2146,2158": "'?' does not contain a definition for 'FindProperty'",
+								"2198,2199": "Cannot convert from ? to UnityEditor.SerializedProperty",
+								"2229,2245": "'serializedObject' is not a known identifier",
+								"2246,2258": "'?' does not contain a definition for 'FindProperty'",
+								"2305,2306": "Cannot convert from ? to UnityEditor.SerializedProperty",
+								"2344,2360": "'serializedObject' is not a known identifier",
+								"2361,2373": "'?' does not contain a definition for 'FindProperty'",
+								"2420,2421": "Cannot convert from ? to UnityEditor.SerializedProperty",
+								"2524,2548": "'CheckAndCreateSubEditors' is not a known identifier",
+								"2589,2590": "'ConditionCollectionEditor' does not contain a definition for 'CheckAndCreateSubEditors'",
+								"2706,2720": "'CleanupEditors' is not a known identifier",
+								"2723,2724": "'ConditionCollectionEditor' does not contain a definition for 'CleanupEditors'",
+								"3328,3344": "'serializedObject' is not a known identifier",
+								"3345,3351": "'?' does not contain a definition for 'Update'",
+								"3354,3355": "'?' does not contain a definition for 'Update'",
+								"3458,3482": "'CheckAndCreateSubEditors' is not a known identifier",
+								"3522,3523": "'ConditionCollectionEditor' does not contain a definition for 'CheckAndCreateSubEditors'",
+								"4157,4178": "'SerializedProperty' does not contain a definition for 'RemoveFromObjectArray'",
+								"4200,4201": "'SerializedProperty' does not contain a definition for 'RemoveFromObjectArray'",
+								"4579,4595": "'serializedObject' is not a known identifier",
+								"4596,4619": "'?' does not contain a definition for 'ApplyModifiedProperties'",
+								"4621,4622": "'?' does not contain a definition for 'ApplyModifiedProperties'",
+								"5434,5444": "'subEditors' is not a known identifier",
+								"5445,5451": "Error: Boolean",
+								"5480,5490": "'subEditors' is not a known identifier",
+								"5493,5494": "Unknown Resolver Error",
+								"5494,5508": "'?' does not contain a definition for 'OnInspectorGUI'",
+								"5510,5511": "'?' does not contain a definition for 'OnInspectorGUI'",
+								"5831,5840": "'Condition' is not a known identifier",
+								"5922,5938": "'SerializedProperty' does not contain a definition for 'AddToObjectArray'",
+								"5952,5953": "'SerializedProperty' does not contain a definition for 'AddToObjectArray'",
+								"6497,6498": "'CreateInstance' is not a known identifier",
+								"6499,6500": "Cannot convert from ? to ConditionCollection",
+								"6721,6730": "'Condition' is not a known identifier",
+								"6733,6734": "Cannot convert from ?[] to ?[]"
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Assets/Scripts/ScriptableObjects/Interaction/Conditions/Condition.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 939,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								136,
+								136
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"575,586": "Name should have prefix '_'. (Rule 'Fields').",
+								"668,677": "Name should have prefix '_'. (Rule 'Fields').",
+								"786,790": "Name should have prefix '_'. (Rule 'Fields')."
 							},
 							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
 						},
-						"translation.x": 3.0,
-						"translation.y": 87.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "Assets/Scripts/Editor/Interaction/Conditions/AllConditionsEditor.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9280,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8338,
+								8338
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"1522,1535": "'AllConditions' is not a known identifier",
+								"1536,1542": "Cannot convert from ? to [UnknownType AllConditions]",
+								"1665,1675": "'AllConditions' does not contain a definition for 'conditions'",
+								"1711,1721": "'AllConditions' does not contain a definition for 'conditions'",
+								"1728,1737": "'Condition' is not a known identifier",
+								"1740,1741": "Cannot convert from ?[] to ?",
+								"2636,2647": "Cannot convert from ? to System.String",
+								"4302,4312": "'AllConditions' does not contain a definition for 'conditions'",
+								"4313,4319": "Cannot convert from ? to System.Int32",
+								"4585,4586": "Cannot convert from [UnknownType Condition] to UnityEngine.Object",
+								"4586,4587": "Invocation error: AmbiguousMatch",
+								"4954,4967": "'AllConditions' is not a known identifier",
+								"4968,4976": "Cannot convert from ? to System.Boolean",
+								"5091,5104": "'AllConditions' is not a known identifier",
+								"5131,5144": "'AllConditions' is not a known identifier",
+								"5147,5148": "Invocation error: MethodConstraintsNotSatisfied",
+								"5183,5191": "Cannot convert from ? to UnityEngine.Object",
+								"5206,5207": "Invocation error: ArgumentTypeMismatch",
+								"5264,5277": "'AllConditions' is not a known identifier",
+								"5278,5286": "'?' does not contain a definition for 'Instance'",
+								"5368,5378": "'?' does not contain a definition for 'conditions'",
+								"5385,5394": "'Condition' is not a known identifier",
+								"5397,5398": "Cannot convert from ?[] to ?",
+								"5574,5587": "'AllConditions' is not a known identifier",
+								"5588,5596": "Error: Boolean",
+								"5774,5783": "'Condition' is not a known identifier",
+								"5939,5943": "'?' does not contain a definition for 'name'",
+								"5946,5957": "Cannot convert from System.String to ?",
+								"60,73": "'AllConditions' is not a known identifier",
+								"6063,6075": "Cannot convert from ? to UnityEngine.Object",
+								"6101,6102": "Invocation error: ArgumentTypeMismatch",
+								"6203,6215": "Cannot convert from ? to UnityEngine.Object",
+								"6217,6230": "'AllConditions' is not a known identifier",
+								"6231,6239": "Cannot convert from ? to System.String",
+								"6240,6241": "Invocation error: AmbiguousMatch",
+								"6371,6383": "Cannot convert from ? to UnityEngine.Object",
+								"6384,6385": "Invocation error: AmbiguousMatch",
+								"6474,6487": "'AllConditions' is not a known identifier",
+								"6488,6496": "'?' does not contain a definition for 'Instance'",
+								"6497,6507": "Cannot convert from ?& to ?[]&",
+								"6522,6523": "Invocation error: ArgumentTypeMismatch",
+								"6676,6689": "'AllConditions' is not a known identifier",
+								"6690,6698": "Cannot convert from ? to UnityEngine.Object",
+								"6699,6700": "Invocation error: ArgumentTypeMismatch",
+								"6871,6880": "'Condition' is not a known identifier",
+								"6973,6986": "'AllConditions' is not a known identifier",
+								"6987,6995": "Error: Boolean",
+								"7218,7231": "'AllConditions' is not a known identifier",
+								"7232,7240": "Cannot convert from ? to UnityEngine.Object",
+								"7263,7264": "Invocation error: ArgumentTypeMismatch",
+								"7370,7383": "'AllConditions' is not a known identifier",
+								"7384,7392": "'?' does not contain a definition for 'Instance'",
+								"7393,7403": "Cannot convert from ?& to ?[]&",
+								"7415,7416": "Invocation error: ArgumentTypeMismatch",
+								"7543,7552": "Cannot convert from [UnknownType Condition] to UnityEngine.Object",
+								"7559,7560": "Invocation error: ArgumentTypeMismatch",
+								"7749,7762": "'AllConditions' is not a known identifier",
+								"7763,7771": "Cannot convert from ? to UnityEngine.Object",
+								"7772,7773": "Invocation error: ArgumentTypeMismatch",
+								"7950,7959": "'Condition' is not a known identifier",
+								"8206,8210": "'Condition' does not contain a definition for 'hash'",
+								"8224,8228": "Error: Boolean",
+								"8365,8374": "'Condition' is not a known identifier",
+								"8461,8470": "'Condition' is not a known identifier",
+								"8489,8502": "'AllConditions' is not a known identifier",
+								"8503,8511": "'?' does not contain a definition for 'Instance'",
+								"8512,8522": "Cannot convert from ? to ?[]",
+								"897,910": "'AllConditions' is not a known identifier",
+								"9096,9109": "'AllConditions' is not a known identifier",
+								"9110,9118": "'?' does not contain a definition for 'Instance'",
+								"9119,9129": "'?' does not contain a definition for 'conditions'",
+								"9230,9243": "'AllConditions' is not a known identifier",
+								"9244,9252": "'?' does not contain a definition for 'Instance'",
+								"9253,9263": "'?' does not contain a definition for 'conditions'",
+								"9264,9270": "Cannot convert from ? to System.Int32"
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3854.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "Assets/Scripts/MonoBehaviours/Gameplay/World/Interactable.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1152,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								300,
+								300
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"309,328": "'ConditionCollection' is not a known identifier"
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "Assets/Scripts/MonoBehaviours/Gameplay/World/ActionItem.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 64,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								61,
+								61
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"0,5": "Using directive is not used by code and can be removed safely."
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "Assets/Scripts/ScriptableObjects/Interaction/Conditions/ConditionCollection.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1471,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								593,
+								593
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"1149,1162": "'AllConditions' is not a known identifier",
+								"1163,1177": "'?' does not contain a definition for 'CheckCondition'",
+								"1201,1202": "Error: Boolean",
+								"1335,1353": "Cannot convert from [UnknownType ReactionCollection] to System.Boolean",
+								"1386,1391": "'ReactionCollection' does not contain a definition for 'React'",
+								"1393,1394": "'ReactionCollection' does not contain a definition for 'React'",
+								"578,596": "'ReactionCollection' is not a known identifier"
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "Assets/Scripts/MonoBehaviours/Gameplay/World/ZoneTrigger.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 273,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								267,
+								267
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"107,115": "Parameter can be declared with base type"
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "Assets/Scripts/Editor/Interaction/InteractableEditor.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4494,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								971,
+								971
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"1947,1959": "'Interactable' is not a known identifier",
+								"1960,1966": "Cannot convert from ? to [UnknownType Interactable]",
+								"2042,2058": "'serializedObject' is not a known identifier",
+								"2059,2071": "'?' does not contain a definition for 'FindProperty'",
+								"2113,2114": "Cannot convert from ? to UnityEditor.SerializedProperty",
+								"2153,2169": "'serializedObject' is not a known identifier",
+								"2170,2182": "'?' does not contain a definition for 'FindProperty'",
+								"2223,2224": "Cannot convert from ? to UnityEditor.SerializedProperty",
+								"2269,2285": "'serializedObject' is not a known identifier",
+								"2286,2298": "'?' does not contain a definition for 'FindProperty'",
+								"2345,2346": "Cannot convert from ? to UnityEditor.SerializedProperty",
+								"2434,2458": "'CheckAndCreateSubEditors' is not a known identifier",
+								"2472,2492": "'Interactable' does not contain a definition for 'conditionCollections'",
+								"2493,2494": "'InteractableEditor' does not contain a definition for 'CheckAndCreateSubEditors'",
+								"2644,2658": "'CleanupEditors' is not a known identifier",
+								"2661,2662": "'InteractableEditor' does not contain a definition for 'CleanupEditors'",
+								"286,298": "'Interactable' is not a known identifier",
+								"3113,3129": "'serializedObject' is not a known identifier",
+								"3130,3136": "'?' does not contain a definition for 'Update'",
+								"3139,3140": "'?' does not contain a definition for 'Update'",
+								"3228,3252": "'CheckAndCreateSubEditors' is not a known identifier",
+								"3266,3286": "'Interactable' does not contain a definition for 'conditionCollections'",
+								"3287,3288": "'InteractableEditor' does not contain a definition for 'CheckAndCreateSubEditors'",
+								"3521,3531": "'subEditors' is not a known identifier",
+								"3532,3538": "Error: Boolean",
+								"3567,3577": "'subEditors' is not a known identifier",
+								"3580,3581": "Unknown Resolver Error",
+								"3581,3595": "'?' does not contain a definition for 'OnInspectorGUI'",
+								"3598,3599": "'?' does not contain a definition for 'OnInspectorGUI'",
+								"404,405": "'EditorWithSubEditors' is not a known identifier",
+								"4092,4108": "'SerializedProperty' does not contain a definition for 'AddToObjectArray'",
+								"4124,4125": "'SerializedProperty' does not contain a definition for 'AddToObjectArray'",
+								"419,431": "'Interactable' is not a known identifier",
+								"4441,4457": "'serializedObject' is not a known identifier",
+								"4458,4481": "'?' does not contain a definition for 'ApplyModifiedProperties'",
+								"4484,4485": "'?' does not contain a definition for 'ApplyModifiedProperties'"
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 174.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "Assets/Scripts/Editor/Abstracts/EditorWithSubEditors.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1967,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -786,6 +1151,66 @@
 		"selected_items":
 		[
 			[
+				"conditioncollection",
+				"Assets/Scripts/ScriptableObjects/Interaction/Conditions/ConditionCollection.cs"
+			],
+			[
+				"editorwith",
+				"Assets/Scripts/Editor/Abstracts/EditorWithSubEditors.cs"
+			],
+			[
+				"condition.cs",
+				"Assets/Scripts/ScriptableObjects/Interaction/Conditions/Condition.cs"
+			],
+			[
+				"conditioncollectioneditor",
+				"Assets/Scripts/Editor/Interaction/Conditions/ConditionCollectionEditor.cs"
+			],
+			[
+				"interactableeditor",
+				"Assets/Scripts/Editor/Interaction/InteractableEditor.cs"
+			],
+			[
+				"zonetrigger",
+				"Assets/Scripts/MonoBehaviours/Gameplay/World/ZoneTrigger.cs"
+			],
+			[
+				"interactabled",
+				"Assets/Scripts/Editor/Interaction/InteractableEditor.cs"
+			],
+			[
+				"interactable",
+				"Assets/Scripts/MonoBehaviours/Gameplay/World/Interactable.cs"
+			],
+			[
+				"allconditions",
+				"Assets/Scripts/Editor/Interaction/Conditions/AllConditionsEditor.cs"
+			],
+			[
+				"conditioneditor",
+				"Assets/Scripts/Editor/Interaction/Conditions/ConditionEditor.cs"
+			],
+			[
+				"inventory",
+				"Assets/Scripts/MonoBehaviours/Gameplay/Items/InventoryController.cs"
+			],
+			[
+				"fade",
+				"Assets/Scripts/MonoBehaviours/Fade.cs"
+			],
+			[
+				"npc",
+				"Assets/Scripts/MonoBehaviours/Gameplay/Actors/NPC.cs"
+			],
+			[
+				"encounter",
+				"Assets/Scripts/MonoBehaviours/Gameplay/Encounter.cs"
+			],
+			[
+				"gameobject",
+				"Assets/Scripts/ScriptableObjects/Interaction/GameObjectReaction.cs"
+			],
+			[
 				"textreaction",
 				"Assets/Scripts/ScriptableObjects/Interaction/TextReaction.cs"
 			],
@@ -800,14 +1225,6 @@
 			[
 				"textreactioneditor",
 				"Assets/Scripts/Editor/Interaction/ReactionEditors/TextReactionEditor.cs"
-			],
-			[
-				"zonetrigger",
-				"Assets/Scripts/MonoBehaviours/Gameplay/World/ZoneTrigger.cs"
-			],
-			[
-				"interactable",
-				"Assets/Scripts/MonoBehaviours/Gameplay/World/Interactable.cs"
 			],
 			[
 				"actionitem",
@@ -836,10 +1253,6 @@
 			[
 				"bandit",
 				"Assets/Scripts/Gameplay/Actors/Bandit.cs"
-			],
-			[
-				"fade",
-				"Assets/Scripts/Fade.cs"
 			],
 			[
 				"cameracontroller",
@@ -1178,10 +1591,6 @@
 				"Game/Assets/Transolar.Runtime/Scripts/Triggers/OnUse.cs"
 			],
 			[
-				"inventory",
-				"Game/Assets/Scripts/Interface/InventoryItemUIManager.cs"
-			],
-			[
 				"delete",
 				"Game/Assets/Scripts/Interface/SystemMenu/SaveLoad/Buttons/DeleteSaveGameButton.cs"
 			],
@@ -1252,50 +1661,6 @@
 			[
 				"sceneinstance",
 				"Game/Assets/Transolar.Runtime/Scenes/SceneInstance.cs"
-			],
-			[
-				"gamestate",
-				"Game/Assets/Transolar.Runtime/State/GameState.cs"
-			],
-			[
-				"once",
-				"Game/Assets/Transolar.Runtime/Scripts/Nodes/OnceOnly.cs"
-			],
-			[
-				"random",
-				"Game/Assets/Transolar.Runtime/Variables/Sources/Random.cs"
-			],
-			[
-				"speak",
-				"Game/Assets/Transolar.Runtime/Scripts/Nodes/Speak.cs"
-			],
-			[
-				"nodecycle",
-				"Game/Assets/Transolar.Runtime/Scripts/Nodes/NodeCycle.cs"
-			],
-			[
-				"scriptstate",
-				"Game/Assets/Transolar.Runtime/State/ScriptState.cs"
-			],
-			[
-				"scriptexecutioncontext",
-				"Game/Assets/Transolar.Runtime/Scripts/ScriptExecutionContext.cs"
-			],
-			[
-				"speak.cs",
-				"Game/Assets/Transolar.Runtime/Scripts/Nodes/Speak.cs"
-			],
-			[
-				"node.cs",
-				"Game/Assets/Transolar.Runtime/Scripts/Nodes/Node.cs"
-			],
-			[
-				"cycle",
-				"Game/Assets/Transolar.Runtime/Scripts/Nodes/NodeCycle.cs"
-			],
-			[
-				"money",
-				"Game/Assets/Transolar.Runtime/Scripts/Nodes/ChangeMoney.cs"
 			]
 		],
 		"width": 0.0
