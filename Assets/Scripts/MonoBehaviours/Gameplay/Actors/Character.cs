@@ -15,8 +15,7 @@ public class Character : Interactable {
 	protected void SetSpeed() {
 		// Set NavAgent speed
 		navAgent = GetComponent<NavMeshAgent> ();
-		navAgent.speed = stats.GetStat(BaseStat.BaseStatType.Speed).BaseValue * 20;
-		navAgent.angularSpeed = stats.GetStat(BaseStat.BaseStatType.Speed).BaseValue * 40;
+		navAgent.speed = stats.GetStat(BaseStat.BaseStatType.Speed).BaseValue;
 	}
 
 	public void TakeDamage(int amount) {
