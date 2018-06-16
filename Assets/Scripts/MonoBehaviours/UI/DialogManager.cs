@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using Ink.Runtime;
 
 public class DialogManager : Singleton<DialogManager> {
 
 	public DialogView View;
+	public ChoiceGroupView ChoiceView;
 
 	private int dialogIndex;
 
@@ -14,6 +16,10 @@ public class DialogManager : Singleton<DialogManager> {
 		if (Input.GetKeyDown (KeyCode.Escape) || Input.GetKeyDown(KeyCode.Return)) {
 			Continue ();
 		}
+	}
+
+	public void AdvanceStory(Story story) {
+		ChoiceView.LayoutChoices(story.currentChoices);
 	}
 
 	// Add one line of dialogue
