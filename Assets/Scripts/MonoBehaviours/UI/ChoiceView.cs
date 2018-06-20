@@ -29,6 +29,9 @@ public class ChoiceView : MonoBehaviour {
 
     public void LayoutText(Choice choice) {
         content = choice.text.Trim();
+    }
+
+    public void Render() {
         text.text = content;
         Show();
     }
@@ -40,12 +43,6 @@ public class ChoiceView : MonoBehaviour {
 
     protected void Awake() {
         button.interactable = false;
-    }
-
-    protected void Update() {
-        if(Input.GetKeyDown((choice.index+1).ToString())) {
-            MakeChoice();
-        }
     }
 
     private void MakeChoice() {

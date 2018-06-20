@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Ink.Runtime;
 
 public class ChoiceGroupView : Singleton<ChoiceGroupView> {
+
+    public Text dialogText;
 
     // List of available choices
 	public List<ChoiceView> choiceViews;
@@ -11,7 +14,8 @@ public class ChoiceGroupView : Singleton<ChoiceGroupView> {
     // Template for what a choice should look like
     public ChoiceView choiceViewPrefab;
 
-    void Awake() {
+    protected override void Awake() {
+        dialogText = transform.Find ("Text").GetComponent<Text> ();
         Hide();
     }
 
@@ -20,10 +24,10 @@ public class ChoiceGroupView : Singleton<ChoiceGroupView> {
         Debug.Log("Choice made.");
     }
 
-    public void LayoutChoices(IList<Choice> choices) {
+    void CreateChoices(IList<Choice> choices) {
         foreach(Choice choice in choices) {
             LayoutChoice(choice);
-        }
+        }  
     }
 
     public ChoiceView LayoutChoice(Choice choice) {
@@ -35,8 +39,19 @@ public class ChoiceGroupView : Singleton<ChoiceGroupView> {
         return choiceView;
     }
 
+    public void Show(IList<Choice> choices) {
+        CreateChoices(choices);
+        if (choices.Count > 0) {
+            foreach (ChoiceView choiceView in choiceViews) {
+                choiceView.Render();
+            }
+        }
+        Time.timeScale = 0;
+        gameObject.SetActive(true);
+    }
     
     public void Hide() {
+        Time.timeScale = 1;
         gameObject.SetActive (false);
     }
 

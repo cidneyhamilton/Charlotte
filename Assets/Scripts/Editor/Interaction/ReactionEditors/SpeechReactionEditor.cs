@@ -12,14 +12,12 @@ public class SpeechReactionEditor : ReactionEditor {
     private const string speechReactionPropMessagesName = "messages";
     private const string speechReactionPropSpeakerName = "speakerName";
 
-
 	protected override void Init ()
     {
         // Cache all the SerializedProperties.
         messagesProperty = serializedObject.FindProperty (speechReactionPropMessagesName);
         speakerProperty = serializedObject.FindProperty (speechReactionPropSpeakerName);
     }
-
 
     protected override void DrawReaction ()
     {
@@ -41,9 +39,7 @@ public class SpeechReactionEditor : ReactionEditor {
         // // Display an interactable GUI element for the text of the message to be displayed over several lines.
         // messagesProperty.stringValue = EditorGUILayout.TextArea (messagesProperty.stringValue, GUILayout.Height (EditorGUIUtility.singleLineHeight * messageGUILines));
         // EditorGUILayout.EndHorizontal ();
-
     }
-
 
     protected override string GetFoldoutLabel ()
     {

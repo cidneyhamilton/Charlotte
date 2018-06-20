@@ -19,7 +19,12 @@ public class DialogManager : Singleton<DialogManager> {
 	}
 
 	public void AdvanceStory(Story story) {
-		ChoiceView.LayoutChoices(story.currentChoices);
+		if (story.canContinue) {
+			AddNewDialogue(story.Continue().Trim());
+		} else {
+			// Show Choices
+		}
+		
 	}
 
 	// Add one line of dialogue

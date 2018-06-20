@@ -10,12 +10,9 @@ public class StoryReaction : Reaction {
 
     // The ink runtime story object
     private Story story;
-
-    void Awake() {
-        story = new Story(storyJSON.text);
-    }
     
     protected override void ImmediateReaction() {
+        story = new Story(storyJSON.text);
         DialogManager.Instance.AdvanceStory(story);
     }
 
