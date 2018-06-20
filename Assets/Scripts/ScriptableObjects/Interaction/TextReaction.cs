@@ -7,6 +7,6 @@ public class TextReaction : Reaction {
     protected override void ImmediateReaction()
     {
         Debug.Log("Text reaction reacting.");
-        DialogManager.Instance.AddNewDialogue (message);
+        DialogManager.Instance.SayText (message);
     }
 }

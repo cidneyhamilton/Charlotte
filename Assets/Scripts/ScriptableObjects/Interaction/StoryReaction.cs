@@ -13,7 +13,7 @@ public class StoryReaction : Reaction {
     
     protected override void ImmediateReaction() {
         story = new Story(storyJSON.text);
-        DialogManager.Instance.AdvanceStory(story);
+        DialogManager.Instance.BeginStory(story);
     }
 
 }

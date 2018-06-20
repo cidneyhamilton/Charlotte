@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using Ink.Runtime;
 
@@ -23,8 +21,12 @@ public class ChoiceView : MonoBehaviour {
 
     public Text text {
         get {
-            return GetComponent<Text>();
+            return transform.GetChild(0).GetComponent<Text>();
         }
+    }
+
+    protected void Awake() {
+        button.interactable = false;
     }
 
     public void LayoutText(Choice choice) {
@@ -39,10 +41,6 @@ public class ChoiceView : MonoBehaviour {
     public void Show() {
         button.enabled = true;
         button.interactable = true;
-    }
-
-    protected void Awake() {
-        button.interactable = false;
     }
 
     private void MakeChoice() {

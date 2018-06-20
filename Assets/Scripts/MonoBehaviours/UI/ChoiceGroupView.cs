@@ -1,12 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Ink.Runtime;
 
 public class ChoiceGroupView : Singleton<ChoiceGroupView> {
-
-    public Text dialogText;
 
     // List of available choices
 	public List<ChoiceView> choiceViews;
@@ -15,19 +12,45 @@ public class ChoiceGroupView : Singleton<ChoiceGroupView> {
     public ChoiceView choiceViewPrefab;
 
     protected override void Awake() {
-        dialogText = transform.Find ("Text").GetComponent<Text> ();
+        foreach(Transform child in transform) {
+            Destroy(child.gameObject);
+        }
         Hide();
+        choiceViews = new List<ChoiceView>();
+    }
+
+    public void Show(IList<Choice> choices) {
+        CreateChoices(choices);
+        gameObject.SetActive(true);
+        if (choices.Count > 0) {
+            foreach (ChoiceView choiceView in choiceViews) {
+                choiceView.Render();
+            }
+        }
+        Time.timeScale = 0;
+        
     }
 
     public void MakeChoice(Choice choice) {
         // Choice made
-        Debug.Log("Choice made.");
+        ClearChoices();
+        Hide();
+        DialogManager.Instance.ChooseChoiceIndex(choice.index);
     }
 
     void CreateChoices(IList<Choice> choices) {
+        ClearChoices();
+
         foreach(Choice choice in choices) {
             LayoutChoice(choice);
         }  
+    }
+
+    private void ClearChoices() {
+        foreach(Transform child in transform) {
+            Destroy(child.gameObject);
+        }
+        choiceViews.Clear();
     }
 
     public ChoiceView LayoutChoice(Choice choice) {
@@ -35,25 +58,14 @@ public class ChoiceGroupView : Singleton<ChoiceGroupView> {
         choiceView.transform.SetParent(transform, false);
         choiceView.choiceGroupView = this;
         choiceView.LayoutText(choice);
+        choiceView.button.onClick.AddListener(delegate { MakeChoice(choice); });
         choiceViews.Add(choiceView);
         return choiceView;
-    }
-
-    public void Show(IList<Choice> choices) {
-        CreateChoices(choices);
-        if (choices.Count > 0) {
-            foreach (ChoiceView choiceView in choiceViews) {
-                choiceView.Render();
-            }
-        }
-        Time.timeScale = 0;
-        gameObject.SetActive(true);
     }
     
     public void Hide() {
         Time.timeScale = 1;
         gameObject.SetActive (false);
     }
-
 
 }

@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
-using System;
 
 public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
-	protected static T instance;
+	protected static T _instance;
+	public bool _persist;
 
 	/// <summary>
 	/// Returns the instance of this singleton.
@@ -13,17 +13,17 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 	{
 		get
 		{
-			if (instance == null)
+			if (_instance == null)
 			{
-				instance = (T) FindObjectOfType(typeof(T));
+				_instance = (T) FindObjectOfType(typeof(T));
 
-				if (instance == null)
+				if (_instance == null)
 				{
 					GameObject g = new GameObject();
 					g.name = typeof(T).Name;
 					g.AddComponent<T>();
 
-					instance = g.GetComponent<T>();
+					_instance = g.GetComponent<T>();
 
 					if (Instance == null)
 						Debug.LogError("Something is severely wrong when trying to use " + typeof(T) + 
@@ -31,17 +31,15 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 				}
 			}
 
-			return instance;
+			return _instance;
 		}
 	}
 
-	public bool Persist = false;
-
 	protected virtual void Awake ()
 	{
-		instance = this.GetComponent<T>();
+		_instance = GetComponent<T>();
 
-		if (Persist)
+		if (_persist)
 			DontDestroyOnLoad(this);
 	}
 

@@ -7,6 +7,7 @@ public class GameObjectReaction : Reaction
 
     protected override void ImmediateReaction()
     {
-        gameObject.SetActive (activeState);
+        // Disabling to test encounters
+        // gameObject.SetActive (activeState);
     }
 }
