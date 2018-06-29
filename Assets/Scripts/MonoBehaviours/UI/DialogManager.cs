@@ -33,8 +33,7 @@ public class DialogManager : Singleton<DialogManager> {
 		if (_story.canContinue) {
 			Debug.Log("Story can continue");
 			string content = _story.Continue().Trim();
-            // TODO: Parse content
-			AddNewDialogue(content);			
+            View.Show("", content);			
 		} else {
 			Debug.Log("Story can't continue");
 			// Show Choices
@@ -96,8 +95,7 @@ public class DialogManager : Singleton<DialogManager> {
 			dialogIndex = 0;
 			View.Hide ();
 			onContinue -= NextLine;
-		}
-		
+		}		
 	}
 
 	private void CompleteDialogue() {

@@ -25,8 +25,10 @@ public class Player : Character {
 	public override void Die() {
 		// Player is dead. Reset health
 		base.Die();	
-		DialogManager.Instance.AddNewDialogue("You have died! GAME OVER.");	
-		Time.timeScale = 0;
+
+        // TODO: Move to Game Manager
+        Time.timeScale = 0;
+		DialogManager.Instance.SayText("You have died!");
 	}
 
 	void Update() {

@@ -3,7 +3,7 @@
 public class Bandit : Character, IEnemy {
 
 	public int Health = 2;
-	public int Speed = 2;
+	public int Speed = 6;
 	public int Strength = 2;
 
 	protected WeaponController weaponController;
@@ -15,18 +15,25 @@ public class Bandit : Character, IEnemy {
 	private const float SIGHT = 15f;
 	private const float RANGE = 1f;
 
-	protected override void Start() {
-		stats = new CharacterStats (Health, Speed, Strength);
-		tag = "Enemy";
-		weaponController = GetComponent<WeaponController> ();
-		if (Strength <= 2) {
-			weaponController.EquipWeapon (new Item("shortsword"));	
-		} else {
-			weaponController.EquipWeapon (new Item("longsword"));	
-		}
-		
-		base.Start();
-	}
+    void Awake() {
+        stats = new CharacterStats (Health, Speed, Strength);
+        weaponController = GetComponent<WeaponController> ();
+        tag = "Enemy";
+    }
+
+    void OnEnable() {
+        EquipWeapon();
+    }
+
+    void EquipWeapon() {
+        if (Strength <= 2) {
+            Debug.Log("Equipping shortsword.");
+            weaponController.EquipWeapon (new Item("shortsword"));  
+        } else {
+            Debug.Log("Equipping longsword.");
+            weaponController.EquipWeapon (new Item("longsword")); 
+        }  
+    }
 
 	void FixedUpdate() {
 		withinAggroColliders = Physics.OverlapSphere (transform.position, 
@@ -40,7 +47,6 @@ public class Bandit : Character, IEnemy {
 	public void PerformAttack() {
 		weaponController.PerformWeaponAttack ();
 	}
-
 
 	void ChasePlayer(Player player) {
 		_player = player;

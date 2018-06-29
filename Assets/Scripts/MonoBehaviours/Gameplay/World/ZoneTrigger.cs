@@ -10,10 +10,15 @@ public class ZoneTrigger : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col) {
         if (col.tag == "Player") {
-            col.gameObject.GetComponent<Player>().Stop();
-            // TODO: Make sure the player is on the outside of the trigger
-            
             // Player entered the trigger
+            Player player = col.gameObject.GetComponent<Player>();
+            if (player == null) {
+                Debug.LogWarning("No player found.");
+            } else {
+                 player.Stop();
+                 // TODO: Make sure the player is on the outside of the trigger
+            }
+            
             if (_recurring) {
                 // If the event is recurring, always react
                 defaultReactionCollection.React (); 

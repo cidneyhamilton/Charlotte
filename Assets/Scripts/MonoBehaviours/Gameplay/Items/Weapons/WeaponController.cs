@@ -20,6 +20,11 @@ public class WeaponController : MonoBehaviour {
 			Debug.LogError("Weapon with key " + itemToEquip.key + " not found.");
 			return;
 		}
+
+        if (hand == null) {
+            Debug.LogError("Need a HAND object to equip the weapon.");
+            return;
+        }
 		EquippedWeapon = (GameObject) Instantiate (weapon);
 		equippedWeapon = EquippedWeapon.GetComponent<IWeapon> ();
 
@@ -28,9 +33,9 @@ public class WeaponController : MonoBehaviour {
 			Debug.Log ("Set Projectile Spawn");
 			EquippedWeapon.GetComponent<IProjectile> ().ProjectileSpawn = spawnProjectile;
 		}
-
-		EquippedWeapon.transform.SetParent (hand.transform, false);
 		EquippedWeapon.tag = tag;
+        EquippedWeapon.transform.SetParent(hand.transform, false);
+        // EquippedWeapon.transform.SetPositionAndRotation(Vector3.zero, Quaternion.identity);
 	}
 
 	private GameObject GetWeaponByKey(string key) {
