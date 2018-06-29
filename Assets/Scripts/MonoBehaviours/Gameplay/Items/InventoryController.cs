@@ -29,6 +29,10 @@ public class InventoryController : Singleton<InventoryController> {
 		}
 	}
 
+    public void AddItem(Item item) {
+        AddItem(item.itemName);
+    }
+
 	public void RemoveItem(string itemKey) {
 		Item item = GetItemFromKey (itemKey);
 		playerItems.Remove (item);

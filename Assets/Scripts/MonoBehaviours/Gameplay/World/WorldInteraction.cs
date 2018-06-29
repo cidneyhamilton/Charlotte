@@ -43,6 +43,7 @@ public class WorldInteraction : MonoBehaviour {
 		if (Physics.Raycast(GetInteractionRay(), out interactionInfo, Mathf.Infinity)) {
 			GameObject interactionObject = interactionInfo.collider.gameObject;
 			if (interactionObject.tag == INTERACTION_TAG) {
+                Debug.Log("Moving to interactable " + interactionObject.gameObject.name);
 				interactionObject.GetComponent<Interactable> ().MoveToInteraction (playerAgent);
 			} else {
 				Move (interactionInfo.point);

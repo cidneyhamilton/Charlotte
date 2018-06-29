@@ -2,9 +2,16 @@
 
 public class Character : Interactable {
 
+	// For combat
 	protected CharacterStats stats;
 	protected int currentHealth, maxHealth;
+
+	// For movement
 	protected NavMeshAgent navAgent;
+
+	// Callback to spawn loot, or perform an action, when the character dies
+	public delegate void OnDeath();
+	public event OnDeath onDeath;
 	
     public void Stop() {
         navAgent.destination = transform.position;
@@ -22,6 +29,7 @@ public class Character : Interactable {
 		navAgent.speed = stats.GetStat(BaseStat.BaseStatType.Speed).BaseValue;
 	}
 
+	// Damage the character by the given amount
 	public void TakeDamage(int amount) {
 		currentHealth -= amount;
 		if (currentHealth <= amount) {
@@ -30,7 +38,9 @@ public class Character : Interactable {
 	}
 
 	public virtual void Die() {
-		// TODO: Kill the enemy and replace with a corpse
+		if (onDeath != null) {
+			onDeath();
+		}
 		Destroy(gameObject);
 	}
 }

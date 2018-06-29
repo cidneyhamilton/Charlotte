@@ -20,12 +20,11 @@ public class Player : Character {
 		weaponController.EquipWeapon(new Item("longsword"));
 		stats = new CharacterStats (10, 10, 4);
 		base.Start();
+
+        onDeath += PlayerDeath;
 	}
 
-	public override void Die() {
-		// Player is dead. Reset health
-		base.Die();	
-
+	protected void PlayerDeath() {
         // TODO: Move to Game Manager
         Time.timeScale = 0;
 		DialogManager.Instance.SayText("You have died!");
