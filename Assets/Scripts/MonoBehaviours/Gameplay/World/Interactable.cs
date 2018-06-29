@@ -25,9 +25,9 @@ public class Interactable : MonoBehaviour {
 			return;
 		}
 		if (playerAgent == null) {
-			Debug.Log("No player agent.");
 			return;
 		}
+        
 		if (playerAgent.pathPending) {
 			Debug.Log("Path pending.");
 			return;
