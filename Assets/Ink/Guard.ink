@@ -12,7 +12,8 @@ We don't want more bandits here. -> not_a_bandit
 * -> have_information
     
 === have_information ===
-* I have information about these bandits. -> what_could_you_know
+* I have information about these bandits. 
+-> what_could_you_know
 
 === what_could_you_know ===
 What could you possibly know? 
@@ -21,4 +22,5 @@ What could you possibly know?
     * * I know when the gang is transferring hostages.
         The guards reads C's note to Alexander.
         You killed Alexander? Great, come on in.
+        TODO: Remove guard.
 -> END

@@ -33,6 +33,7 @@ public class DialogManager : Singleton<DialogManager> {
 		if (_story.canContinue) {
 			Debug.Log("Story can continue");
 			string content = _story.Continue().Trim();
+            // TODO: Parse content
 			AddNewDialogue(content);			
 		} else {
 			Debug.Log("Story can't continue");
