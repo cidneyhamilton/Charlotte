@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Alexander : Bandit {
+[RequireComponent(typeof(Character))]
+public class Lootable : MonoBehaviour {
 
+	// What item is getting picked up?
     public PickupItem loot;
 
     void Start() {
-        base.Start();
-        onDeath += DropLoot;
+        GetComponent<Character>().onDeath += DropLoot;
     }
 
 	void DropLoot() {

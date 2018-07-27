@@ -28,6 +28,18 @@
 		"actionName": "Equip"
 	},
 	{
+		"key": "letter",
+		"itemName": "Letter from Charlotte",
+		"description": "A letter from Charlotte.",
+		"Type": "Quest",
+	},
+	{
+		"key": "key",
+		"itemName": "Key",
+		"description": "A small brass key.",
+		"Type": "Quest",
+	},
+	{
 		"key": "reward",
 		"itemName": "Reward Money",
 		"description": "One kilogram, of silver",

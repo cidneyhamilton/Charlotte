@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class PickupItem : Interactable {
 
+	// Reference to the item being picked up
+	public string itemName;
+
+	// Reactions when picking up item
     public ReactionCollection reactions;
 
     public override void Interact() {
 
-        // TODO: Make generic
-        DialogManager.Instance.SayText ("Alexander, we are transferring the hostages to you at the cave tomorrow at noon. Yours, C.");
+        // React when picking up the item
+        reactions.React();
+
+        // Update inventory with the item dropped
+        InventoryController.Instance.AddItem(itemName);
+
+        // Remove item from game world
         Destroy(gameObject);
     }
 }

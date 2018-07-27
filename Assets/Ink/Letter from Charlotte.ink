@@ -1,0 +1,3 @@
+It's a piece of paper. It reads...
+"Alexander, we are transferring the hostages to you at the cave tomorrow at noon.
+"Yours, C."

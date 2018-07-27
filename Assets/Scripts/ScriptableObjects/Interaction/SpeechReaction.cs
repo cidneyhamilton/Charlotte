@@ -7,7 +7,6 @@ public class SpeechReaction : Reaction {
 
     protected override void ImmediateReaction()
     {
-        Debug.Log("Text reaction reacting.");
         DialogManager.Instance.AddNewDialogue (messages, speakerName);
     }
 }

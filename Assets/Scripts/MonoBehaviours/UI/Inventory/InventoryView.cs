@@ -28,7 +28,6 @@ public class InventoryView : Singleton<InventoryView> {
 		InventoryItemView emptyItem = Instantiate (itemContainer);
 		emptyItem.SetItem (item);
 		emptyItem.transform.SetParent (scrollViewContent);
-
 	}
 
 }
