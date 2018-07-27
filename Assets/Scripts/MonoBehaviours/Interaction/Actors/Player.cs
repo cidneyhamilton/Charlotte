@@ -13,6 +13,10 @@ public class Player : Character {
 		}
 	}
 
+	public bool IsWounded() {
+		return currentHealth < maxHealth;
+	}
+
 	protected override void Start() {
 		tag = "Player";
 		weaponController = GetComponent<WeaponController> ();

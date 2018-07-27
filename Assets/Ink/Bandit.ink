@@ -1,7 +1,8 @@
 VAR current_scene = "Ravine"
 
-What happened to our Alexander?
+Bandit: What happened to our Alexander?
 * I killed him.
 * No answer
-- Bastard... bitch... whatever, you die now.
+- Bandit: Bastard... bitch... whatever, you die now.
+TODO: Start Combat
 -> END

@@ -9,6 +9,10 @@ public class PickupItem : Interactable {
 
     public override void Interact() {
     	Debug.Log("Item picked up.");
+
+    	// Play pickup sound effect
+    	AudioController.Instance.PickupItem();
+
         // Update inventory with the item dropped
         InventoryController.Instance.AddItem(itemName);
 

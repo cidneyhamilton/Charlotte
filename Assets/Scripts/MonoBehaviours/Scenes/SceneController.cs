@@ -8,6 +8,13 @@ public class SceneController : Singleton<SceneController> {
 
     const string UI_SCENE = "User Interface";
 
+    public Player Hero { 
+        get {
+            // attach in a more efficient way
+            return GameObject.FindObjectOfType<Player>();
+        }
+    }
+
     // Called from triggers between areas when the player wants to switch scenes
     public void SwitchScene(string sceneName) {
         StartCoroutine(SwitchScenes(sceneName));

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 
@@ -32,6 +33,10 @@ public class DialogManager : Singleton<DialogManager> {
 			return InventoryController.Instance.HasItem(itemKey);
 		});  
 
+		_story.BindExternalFunction("is_wounded", () => {
+			return SceneController.Instance.Hero.IsWounded();
+		});
+
 		_story.ObserveVariable("current_scene", (string varName, object sceneName) => {
 			SceneController.Instance.SwitchScene ((string) sceneName);
 		});
@@ -44,7 +49,8 @@ public class DialogManager : Singleton<DialogManager> {
 		if (_story.canContinue) {
 			Debug.Log("Story can continue");
 			string content = _story.Continue().Trim();
-            View.Show("", content);			
+
+            View.Show(InkParser.Speaker(content), InkParser.Speech(content));			
 		} else {
 			Debug.Log("Story can't continue");
 			// Show Choices

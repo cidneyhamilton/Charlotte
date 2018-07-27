@@ -9,10 +9,11 @@ public class Lootable : MonoBehaviour {
     public PickupItem loot;
 
     void Start() {
+    	// Add Drop Loot to the character's OnDeath function
         GetComponent<Character>().onDeath += DropLoot;
     }
 
 	void DropLoot() {
-        PickupItem instance = Instantiate(loot, transform.position, Quaternion.identity);
+        Instantiate(loot, transform.position, Quaternion.identity);
     }
 }

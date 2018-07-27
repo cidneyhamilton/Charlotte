@@ -7,12 +7,12 @@ VAR current_scene = "Cave"
 -> Cage
 
 === Cage ===
-This cage was obviously meant to contain hostages.
+Narrator: This cage was obviously meant to contain hostages.
 * { !has_item("key") } [Open Cage]
-    It's locked, and you don't have the key. 
+    Narrator: It's locked, and you don't have the key. 
     -> Cage
 * { has_item("key") } [Unlock Cage]
-    Congratulations, you've rescued the hostages!
+    Narrator: Congratulations, you've rescued the hostages!
     ~ current_scene = "Throne Room"
     -> DONE
 + Leave
