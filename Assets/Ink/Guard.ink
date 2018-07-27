@@ -1,3 +1,5 @@
+VAR current_scene = "Entrance to City"
+
 State your name, stranger.
 * Give your name
 We're not expecting anyone by that name. 

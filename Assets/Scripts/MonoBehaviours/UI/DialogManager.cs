@@ -25,6 +25,17 @@ public class DialogManager : Singleton<DialogManager> {
 	public void BeginStory(Story story) {
 		Debug.Log("Beginning story");
 		_story = story;
+
+		// Allows stories to query the player's inventory
+		_story.BindExternalFunction ("has_item", (string itemKey) => {
+			Debug.Log(string.Format("Checking to see if player has {0}.", itemKey));
+			return InventoryController.Instance.HasItem(itemKey);
+		});  
+
+		_story.ObserveVariable("current_scene", (string varName, object sceneName) => {
+			SceneController.Instance.SwitchScene ((string) sceneName);
+		});
+
 		onContinue += AdvanceStory;
 		AdvanceStory();
 	}

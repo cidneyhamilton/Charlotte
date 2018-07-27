@@ -57,7 +57,12 @@ public class ReactionCollectionEditor : EditorWithSubEditors<ReactionEditor, Rea
     protected override void SubEditorSetup (ReactionEditor editor)
     {
         // Make sure the ReactionEditors have a reference to the array that contains their targets.
-        editor.reactionsProperty = reactionsProperty;
+        if (editor == null) {
+            Debug.LogError("Error setting up reaction editor.");
+        } else {
+             editor.reactionsProperty = reactionsProperty;    
+        }
+       
     }
 
 

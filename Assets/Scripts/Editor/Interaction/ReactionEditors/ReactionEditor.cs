@@ -9,7 +9,6 @@ public abstract class ReactionEditor : Editor
 
     private Reaction reaction;                      // The target Reaction.
 
-
     private const float buttonWidth = 30f;          // Width in pixels of the button to remove this Reaction from the ReactionCollection array.
 
 
@@ -64,7 +63,7 @@ public abstract class ReactionEditor : Editor
     public static Reaction CreateReaction (Type reactionType)
     {
         // Create a reaction of a given type.
-        return (Reaction)CreateInstance (reactionType);
+        return (Reaction) CreateInstance (reactionType);
     }
 
 

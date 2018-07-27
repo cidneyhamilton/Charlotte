@@ -1,3 +1,5 @@
+VAR current_scene = "Entrance to City"
+
 Do you even know what these hostages are?
 * No.
 Gang queen Charlotte kidnapped three merchant families. Fifteen people overall, favorites of His Majesty. 

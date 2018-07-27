@@ -25,7 +25,7 @@ public class Item {
 		string itemName, 
 		string description, 
 		Type type,
-			string ActionName) 
+		string ActionName) 
 	{
 		this.key = key;
 		this.itemName = itemName;

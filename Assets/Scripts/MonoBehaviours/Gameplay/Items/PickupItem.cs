@@ -7,14 +7,8 @@ public class PickupItem : Interactable {
 	// Reference to the item being picked up
 	public string itemName;
 
-	// Reactions when picking up item
-    public ReactionCollection reactions;
-
     public override void Interact() {
-
-        // React when picking up the item
-        reactions.React();
-
+    	Debug.Log("Item picked up.");
         // Update inventory with the item dropped
         InventoryController.Instance.AddItem(itemName);
 
