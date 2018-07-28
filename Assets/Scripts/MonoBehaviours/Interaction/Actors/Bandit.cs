@@ -15,7 +15,10 @@ public class Bandit : Hostile, IEnemy {
 
     void OnEnable() {
         EquipWeapon();
+        onDeath += CombatController.EnemyDied;
     }
+
+
 
     void EquipWeapon() {
         if (Strength <= 2) {

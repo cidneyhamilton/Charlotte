@@ -38,6 +38,7 @@ public class DialogManager : Singleton<DialogManager> {
 		});
 
 		_story.ObserveVariable("current_scene", (string varName, object sceneName) => {
+			Debug.Log("Switching scenes.");
 			SceneController.Instance.SwitchScene ((string) sceneName);
 		});
 
@@ -49,7 +50,6 @@ public class DialogManager : Singleton<DialogManager> {
 		if (_story.canContinue) {
 			Debug.Log("Story can continue");
 			string content = _story.Continue().Trim();
-
             View.Show(InkParser.Speaker(content), InkParser.Speech(content));			
 		} else {
 			Debug.Log("Story can't continue");

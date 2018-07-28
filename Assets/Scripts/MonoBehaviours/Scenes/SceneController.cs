@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : Singleton<SceneController> {
 
+    public delegate void OnEntered();
+    public event OnEntered onEntered;
+
     public string StartingSceneName { get; set; } 
 
     const string UI_SCENE = "User Interface";
@@ -26,10 +29,16 @@ public class SceneController : Singleton<SceneController> {
             StartingSceneName = "Ravine";   
         }
 
-        yield return StartCoroutine(LoadUI());
+        yield return LoadUI();
 
-        // Load Start Scene
-        yield return StartCoroutine (LoadSceneAndSetActive (StartingSceneName));
+        if (SceneManager.GetActiveScene().name == "Start") {
+            // Load Start Scene
+            yield return LoadSceneAndSetActive (StartingSceneName);
+        } 
+
+        if (onEntered != null) {
+            onEntered();
+        }
 
         // TODO: Fade in, nicely?
     }
@@ -47,6 +56,7 @@ public class SceneController : Singleton<SceneController> {
 
         // TODO: Fade in
     }
+
     private IEnumerator LoadSceneAndSetActive (string sceneName)
     {
         
@@ -54,5 +64,6 @@ public class SceneController : Singleton<SceneController> {
 
         Scene newlyLoadedScene = SceneManager.GetSceneAt (SceneManager.sceneCount - 1);
         SceneManager.SetActiveScene (newlyLoadedScene);
+
     }
 }

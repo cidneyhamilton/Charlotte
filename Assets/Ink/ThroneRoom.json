@@ -1,0 +1,1 @@
+﻿{"inkVersion":18,"root":[["^King: I name you hero of the city.","\n","^King: I declare you to be a knight, and I bestow upon you a prize of two kilograms of silver.","\n","end",["done",{"#f":7,"#n":"g-0"}],null],"done",{"global decl":["ev","str","^Throne Room","/str",{"VAR=":"current_scene"},"/ev","end",null],"#f":3}],"listDefs":{}}

@@ -37,10 +37,10 @@ Captain: Alexander's cave is west of the city, it's his hideout.
 * Will there even be anyone still around in the cave?
     Captain: Did you kill everyone on the road here?
     * * Yes.
-        Yes, but just a few people.
+        Captain: Yes, but just a few people.
         -> about_charlotte
     * * No.
-        They'll be in the cave.
+        Captain: They'll be in the cave.
         -> about_charlotte
 * Should I go before or after noon?
     Captain: Your call. Do you want to attack them in one large force but then you can retreat, or do you want to first empty the cave and then attack Charlotte?
@@ -48,6 +48,6 @@ Captain: Alexander's cave is west of the city, it's his hideout.
 * -> goodbye
 
 = goodbye
-- Good luck. If you succeed, His Majesty will look favorably upon you.
+- Captain: Good luck. If you succeed, His Majesty will look favorably upon you.
 ~ current_scene = "Next Day"
 -> DONE

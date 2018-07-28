@@ -1,0 +1,1 @@
+﻿{"inkVersion":18,"root":[["^Charlotte: Guys, let's move everyone inside and... wait, what happened here?","\n","^Charlotte: Everyone, rush in!","\n","end",["done",{"#f":7,"#n":"g-0"}],null],"done",{"global decl":["ev","str","^Cave","/str",{"VAR=":"current_scene"},"/ev","end",null],"#f":3}],"listDefs":{}}

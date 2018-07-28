@@ -20,7 +20,7 @@ public class Hostile : Character {
         stats = new CharacterStats (Health, Speed, Strength);
         tag = "Enemy";
     }
-	
+
 	void FixedUpdate() {
         withinAggroColliders = Physics.OverlapSphere (transform.position, 
             SIGHT, 
