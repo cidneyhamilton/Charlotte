@@ -11,7 +11,7 @@ public class Item {
 	public string itemName;
 	public string description;
 
-	[JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))
+	[JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
 	public Type itemType;
 	public string ActionName;
 
