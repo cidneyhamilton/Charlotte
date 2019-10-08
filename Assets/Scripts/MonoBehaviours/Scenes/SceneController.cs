@@ -3,21 +3,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneController : Singleton<SceneController> {
-
+	
     public delegate void OnEntered();
     public event OnEntered onEntered;
-
+	
     public string StartingSceneName { get; set; } 
-
+	
     const string UI_SCENE = "User Interface";
-
+	
     public Player Hero { 
         get {
             // attach in a more efficient way
             return GameObject.FindObjectOfType<Player>();
         }
     }
-
+	
     // Called from triggers between areas when the player wants to switch scenes
     public void SwitchScene(string sceneName) {
         StartCoroutine(SwitchScenes(sceneName));
@@ -31,7 +31,7 @@ public class SceneController : Singleton<SceneController> {
 
         yield return LoadUI();
 
-        if (SceneManager.GetActiveScene().name == "Start") {
+        if (SceneManager.GetActiveScene().name == "_Start") {
             // Load Start Scene
             yield return LoadSceneAndSetActive (StartingSceneName);
         } 
