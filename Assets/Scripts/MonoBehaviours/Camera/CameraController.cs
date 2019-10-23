@@ -4,42 +4,44 @@ using UnityEngine;
 
 public class CameraController : Singleton<CameraController> {
 
-	public float PlayerCameraDistance { get; set; }
 	public Transform cameraTarget;
 
 	Camera playerCamera;
 	const float ZOOM_SPEED = 5f;
 	const float DISTANCE = 10f;
 
+	const int MAX_ZOOM = 100;
+	const int MIN_ZOOM = 15;
+	
 	void Start() {
-		PlayerCameraDistance = DISTANCE;
 		playerCamera = GetComponent<Camera> ();
 	}
 
-	void Update() {
-		if (Input.GetAxisRaw("Mouse ScrollWheel") != 0) {
-			Zoom();
-		}
-		
-		transform.position = GetCameraPosition ();
+	void Update() {		
+		TrackPlayer();
+		Zoom();
 	}
 
 	void Zoom() {
-		float scroll = Input.GetAxis ("Mouse ScrollWheel");
-		playerCamera.fieldOfView -= scroll * ZOOM_SPEED;
-
-		// Clamp zoom
-		playerCamera.fieldOfView = Mathf.Clamp(playerCamera.fieldOfView, 15, 100);
+		if (Input.GetAxisRaw("Mouse ScrollWheel") != 0) {
+			float scroll = Input.GetAxis ("Mouse ScrollWheel");
+			playerCamera.fieldOfView -= scroll * ZOOM_SPEED;
+			
+			// Clamp zoom
+			playerCamera.fieldOfView = Mathf.Clamp(playerCamera.fieldOfView, MIN_ZOOM, MAX_ZOOM);
+		}
 	}
 
-	Vector3 GetCameraPosition() {
+	void TrackPlayer() {
+		// Assign player
 		if (cameraTarget == null) {
-			return new Vector3();
+			cameraTarget = GameObject.FindObjectOfType<Player>().transform;	   	
 		}
-		return new Vector3 (
-			cameraTarget.position.x,
-			cameraTarget.position.y + PlayerCameraDistance,
-			cameraTarget.position.z - PlayerCameraDistance
-		);
+
+		if (cameraTarget != null) {
+			transform.position = new Vector3 (cameraTarget.position.x,
+											  cameraTarget.position.y + DISTANCE,
+											  cameraTarget.position.z - DISTANCE);
+		}
 	}
 }
