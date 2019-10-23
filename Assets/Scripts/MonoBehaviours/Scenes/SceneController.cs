@@ -2,6 +2,8 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using Cyborg.Audio;
+
 public class SceneController : Singleton<SceneController> {
 	
     public delegate void OnEntered();
@@ -31,6 +33,8 @@ public class SceneController : Singleton<SceneController> {
 
         yield return LoadUI();
 
+		AudioEvents.PlayMusic("sanctuary");
+		
         if (SceneManager.GetActiveScene().name == "_Start") {
             // Load Start Scene
             yield return LoadSceneAndSetActive (StartingSceneName);
@@ -49,7 +53,8 @@ public class SceneController : Singleton<SceneController> {
     }
 
     private IEnumerator SwitchScenes(string sceneName) {
-        // TODO: Fade Out
+		
+		// TODO: Fade Out
         yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
 
         yield return LoadSceneAndSetActive(sceneName);

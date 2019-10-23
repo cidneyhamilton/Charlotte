@@ -14,3 +14,7 @@
 * Set up encounters in the bandit cave
 * Conversation with guard
 * Main Menu and Game Over screens
+
+## Credits
+
+Music: [8-bit JPRG soundtrack](https://opengameart.org/content/generic-8-bit-jrpg-soundtrack) by avgvsta.
