@@ -35,10 +35,13 @@ public class CameraController : Singleton<CameraController> {
 	void TrackPlayer() {
 		// Assign player
 		if (cameraTarget == null) {
-			cameraTarget = GameObject.FindObjectOfType<Player>().transform;	   	
+			Player player = GameObject.FindObjectOfType<Player>();
+			if (player != null) {
+				cameraTarget = player.transform;
+			}
 		}
 
-		if (cameraTarget != null) {
+		if (cameraTarget != null) {		   
 			transform.position = new Vector3 (cameraTarget.position.x,
 											  cameraTarget.position.y + DISTANCE,
 											  cameraTarget.position.z - DISTANCE);

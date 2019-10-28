@@ -48,7 +48,8 @@ public class CaveController : MonoBehaviour {
 		// Time advances to evening
 
 		// Move player towards the entrance
-		SceneController.Instance.Hero.gameObject.transform.SetPositionAndRotation(FinalEncounterSpawnPoint.transform.position, Quaternion.identity);
+		Player hero = GameObject.FindObjectOfType<Player>();
+		hero.transform.SetPositionAndRotation(FinalEncounterSpawnPoint.transform.position, Quaternion.identity);
 
 		// Final set of bandits enter
 		FinalEncounter.gameObject.SetActive(true);

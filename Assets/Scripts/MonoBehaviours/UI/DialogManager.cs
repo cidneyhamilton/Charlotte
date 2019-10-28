@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 
+using Cyborg.Scenes;
+
 public class DialogManager : Singleton<DialogManager> {
 
 	public DialogView View;
@@ -34,12 +36,12 @@ public class DialogManager : Singleton<DialogManager> {
 		});  
 
 		_story.BindExternalFunction("is_wounded", () => {
-			return SceneController.Instance.Hero.IsWounded();
+				return GameObject.FindObjectOfType<Player>().IsWounded();
 		});
 
 		_story.ObserveVariable("current_scene", (string varName, object sceneName) => {
 			Debug.Log("Switching scenes.");
-			SceneController.Instance.SwitchScene ((string) sceneName);
+			SceneEvents.ChangeScene ((string) sceneName);
 		});
 
 		onContinue += AdvanceStory;

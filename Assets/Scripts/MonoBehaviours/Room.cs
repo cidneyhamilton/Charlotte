@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Ink.Runtime;
 using UnityEngine.SceneManagement;
+using Ink.Runtime;
+
+using Cyborg.Scenes;
 
 public class Room : MonoBehaviour {
 
@@ -11,24 +13,14 @@ public class Room : MonoBehaviour {
 
     // The ink runtime story object
     private Story story;
-    
-    const string START = "Start"; // first scene of the game
 
-    private IEnumerator Start() {
-         // Bootstrap game from any scene
-        if (SceneManager.GetSceneByName(START).IsValid() == false) {
-            Debug.Log("Start scene not found; bootstrapping.");
-            yield return LoadStartScene();
-            SceneController.Instance.onEntered += EnterRoom;
-        } else {
-            EnterRoom();
-        }
-    	
-    }
+	void OnEnable() {
+		SceneController.AfterSceneLoad += EnterRoom;
+	}
 
-    private IEnumerator LoadStartScene() {
-        yield return SceneManager.LoadSceneAsync(START, LoadSceneMode.Additive);
-    }
+	void OnDisable() {
+		SceneController.AfterSceneLoad -= EnterRoom;
+	}
 
     void EnterRoom() {
         if (OnEnteredStory) {
@@ -36,7 +28,7 @@ public class Room : MonoBehaviour {
             // story.ChoosePathString("Entered");
             DialogManager.Instance.BeginStory(story);
         }
-        SceneController.Instance.onEntered -= EnterRoom;
+
     }
 
 }
