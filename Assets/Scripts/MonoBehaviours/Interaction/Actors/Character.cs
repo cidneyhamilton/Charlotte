@@ -4,7 +4,7 @@ public class Character : Interactable {
 
 	// For combat
 	protected CharacterStats stats;
-	protected int currentHealth, maxHealth;
+	public int currentHealth, maxHealth;
 
 	// For movement
 	protected NavMeshAgent navAgent;
