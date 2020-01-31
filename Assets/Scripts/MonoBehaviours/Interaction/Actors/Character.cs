@@ -1,4 +1,5 @@
-﻿using UnityEngine.AI;
+﻿using UnityEngine;
+using UnityEngine.AI;
 
 namespace Charlotte {
     
@@ -14,6 +15,10 @@ namespace Charlotte {
 	// Callback to spawn loot, or perform an action, when the character dies
 	public delegate void OnDeath();
 	public event OnDeath onDeath;
+
+	private AudioSource audio;
+	public AudioClip hit;
+	public AudioClip death;
 	
 	public void Stop() {
 	    navAgent.destination = transform.position;
@@ -23,6 +28,8 @@ namespace Charlotte {
 	    currentHealth = stats.GetStat (BaseStat.BaseStatType.HP).BaseValue;
 	    maxHealth = stats.GetStat (BaseStat.BaseStatType.HP).BaseValue;
 	    SetSpeed();
+
+	    audio = GetComponent<AudioSource>();
 	}
 	
 	protected void SetSpeed() {
@@ -33,16 +40,34 @@ namespace Charlotte {
 	
 	// Damage the character by the given amount
 	public void TakeDamage(int amount) {
+
+	    PlayHitSFX();	
 	    currentHealth -= amount;
 	    if (currentHealth <= amount) {
+		PlayDeathSFX();
 		Die ();
 	    }
 	}
-	
+
+	void PlayHitSFX() {
+	    if (audio) {
+		audio.clip = hit;
+		audio.Play();
+	    };
+	}
+
+	void PlayDeathSFX() {
+	    if (audio) {
+		audio.clip = death;
+		audio.Play();
+	    };
+	}
+
 	public virtual void Die() {
 	    if (onDeath != null) {
 		onDeath();
 	    }
+	    
 	    Destroy(gameObject);
 	}
     }
