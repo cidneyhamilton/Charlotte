@@ -5,17 +5,27 @@ using UnityEngine;
 namespace Charlotte {
     
     public class Sword: MonoBehaviour, IWeapon {
-	
-	
+		
 	public int damage = 4;    
+
+	public AudioClip swing;
+	
 	private Animator animator;
+	private AudioSource audio;
 	
 	public void Start() {
 	    animator = GetComponent<Animator> ();
+	    audio = GetComponent<AudioSource>();
 	}
 	
 	public void PerformAttack() {
+
+	    // Animation
 	    animator.SetTrigger ("Base Attack");
+
+	    // Sound Effect
+	    audio.clip = swing;
+	    audio.Play();
 	}
 	
 	void OnTriggerEnter(Collider target) {

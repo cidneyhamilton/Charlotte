@@ -3,18 +3,11 @@
 ## TODO list
 
 * Add ranged weapons for the Bandit Archers.
-* Giant Rats need a bite attack
 * Lootable bodies
-* Alexander's note on his body
 * Charlotte's key on her body
-* Conditionals in scripts
-* Dialogue options for player
-* Fade reaction for scripts
-* Player needs Alexander's note to exit the ravine
-* Set up encounters in the bandit cave
-* Conversation with guard
 * Main Menu and Game Over screens
 
 ## Credits
 
 Music: [8-bit JPRG soundtrack](https://opengameart.org/content/generic-8-bit-jrpg-soundtrack) by avgvsta.
+Sound Effects: [Swoosh](https://opengameart.org/content/swish-bamboo-stick-weapon-swhoshes) by Iwan Gabovitch.
