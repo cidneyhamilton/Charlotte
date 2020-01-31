@@ -12,6 +12,14 @@ namespace Charlotte {
 	
 	// Template for what a choice should look like
 	public ChoiceView choiceViewPrefab;
+
+	void OnEnable() {
+	    UIEvents.OnHide += Hide;
+	}
+
+	void OnDisable() {
+	    UIEvents.OnHide -= Hide;
+	}
 	
 	protected override void Awake() {
 	    foreach(Transform child in transform) {

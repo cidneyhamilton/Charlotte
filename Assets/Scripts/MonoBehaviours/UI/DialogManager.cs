@@ -39,6 +39,26 @@ namespace Charlotte {
 	    if (Input.GetKeyDown (KeyCode.Escape) || Input.GetKeyDown(KeyCode.Return)) {
 		Continue ();
 	    }
+
+	    if (_story != null) {
+		HandleKeyEvents();
+	    }
+	}
+	
+	void HandleKeyEvents() {
+	    if (_story.currentChoices.Count > 0) {
+		// Make a choice using the alphanumeric keycode                                                                                  
+                if (Input.GetKeyUp(KeyCode.Alpha1)) {
+                    ChooseChoiceIndex(0);
+                } else if (Input.GetKeyUp(KeyCode.Alpha2) && _story.currentChoices.Count > 0) {
+                    ChooseChoiceIndex(1);
+                } else if (Input.GetKeyUp(KeyCode.Alpha3) && _story.currentChoices.Count > 1) {
+                    ChooseChoiceIndex(2);
+                } else if (Input.GetKeyUp(KeyCode.Alpha4)  && _story.currentChoices.Count > 2) {
+                    ChooseChoiceIndex(3);
+                }
+
+	    }
 	}
 	
 	public void BeginStory(Story story) {
@@ -67,6 +87,8 @@ namespace Charlotte {
 	public void AdvanceStory() {
 	    if (_story.canContinue) {
 		Debug.Log("Story can continue");
+		UIEvents.Hide();
+		
 		string content = _story.Continue().Trim();
 		View.Show(InkParser.Speaker(content), InkParser.Speech(content));			
 	    } else {
@@ -88,9 +110,10 @@ namespace Charlotte {
 	
 	// Choose a given choice
 	public void ChooseChoiceIndex(int choiceIndex) {
-	    Debug.Log("Choosing choice index");
 	    _story.ChooseChoiceIndex(choiceIndex);
-	    _story.Continue();
+	    if (_story.canContinue) {
+		_story.Continue();
+	    }
 	    AdvanceStory();
 	}
 
