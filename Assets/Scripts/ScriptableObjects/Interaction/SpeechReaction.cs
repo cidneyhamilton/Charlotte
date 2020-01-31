@@ -9,7 +9,7 @@ namespace Charlotte {
 	
 	protected override void ImmediateReaction()
 	{
-	    DialogManager.Instance.AddNewDialogue (messages, speakerName);
+	    StoryEvents.AddDialogue(messages, speakerName);
 	}
     }
 

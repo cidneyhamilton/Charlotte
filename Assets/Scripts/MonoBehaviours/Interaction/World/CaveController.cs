@@ -19,16 +19,23 @@ namespace Charlotte {
 	
 	// The ink runtime story object
 	private Story story;
+
+	
+	void OnEnable()  {
+	    CombatEvents.OnEnemyDeath += EnemyDied;
+	}
+
+
+	void OnDisable() {
+	    CombatEvents.OnEnemyDeath -= EnemyDied;
+	}
 	
 	void Start() {
 	    // Final enounter is saved for later
 	    FinalEncounter.gameObject.SetActive(false);
 	    
 	    // Keep track of the number of monsters the player needs to kill to advance
-	    numSpawned = GameObject.FindObjectsOfType<Bandit>().Length;
-	    
-	    CombatController.OnEnemyDeath += EnemyDied;
-	    
+	    numSpawned = GameObject.FindObjectsOfType<Bandit>().Length;	          	    
 	}
 	
 	void EnemyDied() {
@@ -61,7 +68,7 @@ namespace Charlotte {
 	    
 	    // Dialogue
 	    story = new Story(OnEnteredStory.text);
-	    DialogManager.Instance.BeginStory(story);
+	    StoryEvents.BeginStory(story);
 	}
 	
     }

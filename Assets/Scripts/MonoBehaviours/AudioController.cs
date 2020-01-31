@@ -2,9 +2,12 @@
 
 using Cyborg.Audio;
 
-public class AudioController : Singleton<AudioController> {
-
+namespace Charlotte {
+    
+    public class AudioController : Singleton<AudioController> {
+	
 	public void PickupItem() {
-		AudioEvents.PlaySound("pickup_item");
+	    AudioEvents.PlaySound("pickup_item");
 	}
+    }
 }

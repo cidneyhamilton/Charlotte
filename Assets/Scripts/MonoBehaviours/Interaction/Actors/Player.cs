@@ -6,7 +6,8 @@ namespace Charlotte {
 	
 	public Player Instance;
 	public WeaponController weaponController;
-	
+
+	const string DeathMessage = "You have died!";
 	void Awake () {
 	    if (Instance != null && !Instance == this) {
 		Destroy(gameObject);
@@ -33,7 +34,7 @@ namespace Charlotte {
 	protected void PlayerDeath() {
 	    // TODO: Move to Game Manager
 	    Time.timeScale = 0;
-	    DialogManager.Instance.SayText("You have died!");
+	    StoryEvents.Say(DeathMessage);
 	}
 	
 	void Update() {

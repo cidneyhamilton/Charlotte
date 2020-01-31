@@ -37,7 +37,7 @@ namespace Charlotte {
 	    // Choice made
 	    ClearChoices();
 	    Hide();
-	    DialogManager.Instance.ChooseChoiceIndex(choice.index);
+	    StoryEvents.Choose(choice.index);
 	}
 	
 	void CreateChoices(IList<Choice> choices) {

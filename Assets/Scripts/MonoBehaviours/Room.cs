@@ -27,8 +27,8 @@ namespace Charlotte {
 	void EnterRoom() {
 	    if (OnEnteredStory) {
 		story = new Story(OnEnteredStory.text);
-		// story.ChoosePathString("Entered");
-		DialogManager.Instance.BeginStory(story);
+
+		StoryEvents.BeginStory(story);
 	    }
 	    
 	}

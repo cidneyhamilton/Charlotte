@@ -17,10 +17,8 @@ namespace Charlotte {
 	
 	void OnEnable() {
 	    EquipWeapon();
-	    onDeath += CombatController.EnemyDied;
-	}
-	
-	
+	    onDeath += CombatEvents.EnemyDied;
+	}       	
 	
 	void EquipWeapon() {
 	    if (Strength <= 2) {

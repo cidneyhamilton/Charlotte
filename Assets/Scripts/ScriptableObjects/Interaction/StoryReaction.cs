@@ -15,7 +15,7 @@ namespace Charlotte {
 	
 	protected override void ImmediateReaction() {
 	    story = new Story(storyJSON.text);
-	    DialogManager.Instance.BeginStory(story);
+	    StoryEvents.BeginStory(story);
 	}
 
     }

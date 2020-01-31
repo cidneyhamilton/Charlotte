@@ -7,7 +7,7 @@ using Cyborg.Scenes;
 
 namespace Charlotte {
     
-    public class DialogManager : Singleton<DialogManager> {
+    public class DialogManager: MonoBehaviour {
 
 	public delegate void OnContinue();
 	public event OnContinue onContinue;
@@ -21,6 +21,20 @@ namespace Charlotte {
 	public string _npcName;
 	public List<string> _dialogueLines = new List<string>();
 
+	void OnEnable() {
+	    StoryEvents.OnBeginStory += BeginStory;	    
+	    StoryEvents.OnChoose += ChooseChoiceIndex;
+	    StoryEvents.OnSay += SayText;
+	    StoryEvents.OnAddDialogue += AddNewDialogue;
+	}
+
+	void OnDisable() {
+	    StoryEvents.OnBeginStory -= BeginStory;
+	    StoryEvents.OnChoose -= ChooseChoiceIndex;
+	    StoryEvents.OnSay -= SayText;
+	    StoryEvents.OnAddDialogue -= AddNewDialogue;
+	}
+	
 	void Update() {
 	    if (Input.GetKeyDown (KeyCode.Escape) || Input.GetKeyDown(KeyCode.Return)) {
 		Continue ();
@@ -98,7 +112,8 @@ namespace Charlotte {
 	    _dialogueLines = new List<string> ();
 	    _dialogueLines.AddRange (lines);
 	    View.Show (npcName, _dialogueLines [0]);
-	    Debug.Log("Adding callback");
+
+	    //Debug.Log("Adding callback");
 	    onContinue += NextLine;
 	}
 	

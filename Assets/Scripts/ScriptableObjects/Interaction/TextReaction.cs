@@ -8,8 +8,7 @@ namespace Charlotte {
 	
 	protected override void ImmediateReaction()
 	{
-	    Debug.Log("Text reaction reacting.");
-	    DialogManager.Instance.SayText (message);
+	    StoryEvents.Say(message);
 	}
     }
 }
