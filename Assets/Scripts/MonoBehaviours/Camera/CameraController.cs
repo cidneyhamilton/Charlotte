@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : Singleton<CameraController> {
-
+namespace Charlotte {
+    
+    public class CameraController : Singleton<CameraController> {
+	
 	public Transform cameraTarget;
-
+	
 	Camera playerCamera;
 	const float ZOOM_SPEED = 5f;
 	const float DISTANCE = 10f;
@@ -42,9 +44,10 @@ public class CameraController : Singleton<CameraController> {
 		}
 
 		if (cameraTarget != null) {		   
-			transform.position = new Vector3 (cameraTarget.position.x,
-											  cameraTarget.position.y + DISTANCE,
-											  cameraTarget.position.z - DISTANCE);
+		    transform.position = new Vector3 (cameraTarget.position.x,
+						      cameraTarget.position.y + DISTANCE,
+						      cameraTarget.position.z - DISTANCE);
 		}
 	}
+    }
 }

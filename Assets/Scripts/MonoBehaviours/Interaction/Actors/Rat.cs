@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rat : Hostile, IEnemy {
+namespace Charlotte {
     
-    public Bite mouth;
-
-    public void PerformAttack() {
-        mouth.PerformAttack ();
+    public class Rat : Hostile, IEnemy {
+	
+	public Bite mouth;
+	
+	public void PerformAttack() {
+	    mouth.PerformAttack ();
+	}
     }
-
 }

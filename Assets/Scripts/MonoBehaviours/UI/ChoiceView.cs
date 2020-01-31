@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using Ink.Runtime;
 
+namespace Charlotte {
 [RequireComponent(typeof(Button))]
 public class ChoiceView : MonoBehaviour {
 
@@ -50,4 +51,6 @@ public class ChoiceView : MonoBehaviour {
     public void OnClick() {
         MakeChoice();
     }
+}
+
 }
