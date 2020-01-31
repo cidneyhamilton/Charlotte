@@ -8,7 +8,10 @@ namespace Charlotte {
 	public WeaponController weaponController;
 
 	const string DeathMessage = "You have died!";
+
 	void Awake () {
+	    
+	    // Make sure there is only one player in the game
 	    if (Instance != null && !Instance == this) {
 		Destroy(gameObject);
 	    } else {
@@ -23,8 +26,10 @@ namespace Charlotte {
 	protected override void Start() {
 	    tag = "Player";
 	    weaponController = GetComponent<WeaponController> ();
+
 	    // Player starts with a longsword
 	    weaponController.EquipWeapon(new Item("longsword"));
+
 	    stats = new CharacterStats (10, 10, 4);
 	    base.Start();
 	    

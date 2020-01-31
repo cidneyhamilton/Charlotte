@@ -1,0 +1,1 @@
+﻿{"inkVersion":18,"root":[["^Alexander: Roads aren't safe around here...","\n","^Alexander: I am Alexander and I am your end.","\n","^Alexander: Boys, get him... or her, whatever!","\n","end",["done",{"#f":7,"#n":"g-0"}],null],"done",{"global decl":["ev","str","^Ravine","/str",{"VAR=":"current_scene"},"/ev","end",null],"#f":3}],"listDefs":{}}
