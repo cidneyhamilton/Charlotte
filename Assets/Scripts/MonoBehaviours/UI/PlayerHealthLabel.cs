@@ -16,16 +16,18 @@ namespace Charlotte {
 	    // Initialize label
 	    label = GetComponent<Text>();
 	}
+
+	void OnEnable() {
+	    CombatEvents.OnPlayerHealthUpdate += UpdateHealth;
+	}
+
+	void OnDisable() {
+	    CombatEvents.OnPlayerHealthUpdate -= UpdateHealth;
+	}
 	
-	void Update()
-	{
-	    // Update health label
-	    Player player = GameObject.FindObjectOfType<Player>();
-	    if (player != null) {
-		label.text = "Health: " + player.currentHealth + "/" + player.maxHealth;
-	    } else {
-		label.text = "You are Dead";
-	    }
+
+	void UpdateHealth(int currentHealth) {
+	    label.text = "Health: " + currentHealth + "/" + 10;
 	}
     }
 

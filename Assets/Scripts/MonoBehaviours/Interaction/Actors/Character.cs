@@ -39,7 +39,7 @@ namespace Charlotte {
 	}
 	
 	// Damage the character by the given amount
-	public void TakeDamage(int amount) {
+	public virtual void TakeDamage(int amount) {
 
 	    PlayHitSFX();	
 	    currentHealth -= amount;
@@ -49,6 +49,14 @@ namespace Charlotte {
 	    }
 	}
 
+	public virtual void Die() {
+	    if (onDeath != null) {
+		onDeath();
+	    }
+	    
+	    Destroy(gameObject);
+	}
+	
 	void PlayHitSFX() {
 	    if (audio) {
 		audio.clip = hit;
@@ -63,12 +71,5 @@ namespace Charlotte {
 	    };
 	}
 
-	public virtual void Die() {
-	    if (onDeath != null) {
-		onDeath();
-	    }
-	    
-	    Destroy(gameObject);
-	}
     }
 }

@@ -18,6 +18,11 @@ namespace Charlotte {
 		Instance = this;
 	    }
 	}
+
+	public override void TakeDamage(int amount) {
+	    base.TakeDamage(amount);
+	    CombatEvents.PlayerHealthUpdate(this.currentHealth);
+	}
 	
 	public bool IsWounded() {
 	    return currentHealth < maxHealth;
