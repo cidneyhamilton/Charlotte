@@ -6,7 +6,7 @@ using UnityEngine.UI;
 namespace Charlotte {
     
     [RequireComponent(typeof(Text))]
-    public class PlayerHealthLabel : MonoBehaviour
+    public class PlayerHealthLabel : HealthView
     {
 	
 	Text label;
@@ -16,17 +16,8 @@ namespace Charlotte {
 	    // Initialize label
 	    label = GetComponent<Text>();
 	}
-
-	void OnEnable() {
-	    CombatEvents.OnPlayerHealthUpdate += UpdateHealth;
-	}
-
-	void OnDisable() {
-	    CombatEvents.OnPlayerHealthUpdate -= UpdateHealth;
-	}
 	
-
-	void UpdateHealth(int currentHealth) {
+	protected override void UpdateHealth(int currentHealth) {
 	    label.text = "Health: " + currentHealth + "/" + 10;
 	}
     }
