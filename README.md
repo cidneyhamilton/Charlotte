@@ -1,5 +1,11 @@
 # Charlotte the Bandit Queen
 
+## Directions
+
+Clone the project, then:
+
+`git submodule update --init --recursive`
+
 ## TODO list
 
 * Add ranged weapons for the Bandit Archers.
