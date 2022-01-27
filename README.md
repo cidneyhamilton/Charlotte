@@ -1,5 +1,7 @@
 # Charlotte the Bandit Queen
 
+Action RPG prototype.
+
 ## Directions
 
 Clone the project, then:
